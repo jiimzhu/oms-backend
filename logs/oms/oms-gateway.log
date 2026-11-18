@@ -1,0 +1,65 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.5)
+
+2026-11-18T15:01:52.170+08:00  INFO 20440 --- [oms-gateway] [           main] c.jim.oms.gateway.OmsGatewayApplication  : Starting OmsGatewayApplication v1.0.0 using Java 17.0.21 with PID 20440 (D:\oms-new\oms-gateway\target\oms-gateway-1.0.0.jar started by »ªÎª in D:\oms-new)
+2026-11-18T15:01:52.175+08:00 DEBUG 20440 --- [oms-gateway] [           main] c.jim.oms.gateway.OmsGatewayApplication  : Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-11-18T15:01:52.177+08:00  INFO 20440 --- [oms-gateway] [           main] c.jim.oms.gateway.OmsGatewayApplication  : No active profile set, falling back to 1 default profile: "default"
+2026-11-18T15:01:53.272+08:00  INFO 20440 --- [oms-gateway] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=2427705b-2a37-3f52-a488-7b1f2b364b01
+2026-11-18T15:01:53.356+08:00  WARN 20440 --- [oms-gateway] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-11-18T15:01:53.359+08:00  WARN 20440 --- [oms-gateway] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-11-18T15:01:53.361+08:00  WARN 20440 --- [oms-gateway] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-11-18T15:01:53.362+08:00  WARN 20440 --- [oms-gateway] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-11-18T15:01:53.363+08:00  WARN 20440 --- [oms-gateway] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-11-18T15:01:55.016+08:00  INFO 20440 --- [oms-gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [After]
+2026-11-18T15:01:55.019+08:00  INFO 20440 --- [oms-gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Before]
+2026-11-18T15:01:55.021+08:00  INFO 20440 --- [oms-gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Between]
+2026-11-18T15:01:55.021+08:00  INFO 20440 --- [oms-gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Cookie]
+2026-11-18T15:01:55.022+08:00  INFO 20440 --- [oms-gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Header]
+2026-11-18T15:01:55.022+08:00  INFO 20440 --- [oms-gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Host]
+2026-11-18T15:01:55.022+08:00  INFO 20440 --- [oms-gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Method]
+2026-11-18T15:01:55.023+08:00  INFO 20440 --- [oms-gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Path]
+2026-11-18T15:01:55.023+08:00  INFO 20440 --- [oms-gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Query]
+2026-11-18T15:01:55.023+08:00  INFO 20440 --- [oms-gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [ReadBody]
+2026-11-18T15:01:55.023+08:00  INFO 20440 --- [oms-gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [RemoteAddr]
+2026-11-18T15:01:55.024+08:00  INFO 20440 --- [oms-gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [XForwardedRemoteAddr]
+2026-11-18T15:01:55.024+08:00  INFO 20440 --- [oms-gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Weight]
+2026-11-18T15:01:55.025+08:00  INFO 20440 --- [oms-gateway] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2026-11-18T15:01:55.671+08:00  INFO 20440 --- [oms-gateway] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2026-11-18T15:01:55.893+08:00  WARN 20440 --- [oms-gateway] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-11-18T15:01:55.980+08:00  INFO 20440 --- [oms-gateway] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-11-18T15:01:56.160+08:00  INFO 20440 --- [oms-gateway] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-11-18T15:01:56.172+08:00  INFO 20440 --- [oms-gateway] [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-18T15:01:56.238+08:00  INFO 20440 --- [oms-gateway] [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-11-18T15:01:56.241+08:00  INFO 20440 --- [oms-gateway] [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-11-18T15:01:56.241+08:00  INFO 20440 --- [oms-gateway] [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-11-18T15:01:56.241+08:00  INFO 20440 --- [oms-gateway] [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-11-18T15:01:56.241+08:00  INFO 20440 --- [oms-gateway] [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-11-18T15:01:56.243+08:00  INFO 20440 --- [oms-gateway] [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-11-18T15:01:56.243+08:00  INFO 20440 --- [oms-gateway] [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-11-18T15:01:56.791+08:00  INFO 20440 --- [oms-gateway] [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-11-18T15:01:56.804+08:00  INFO 20440 --- [oms-gateway] [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 10
+2026-11-18T15:01:56.807+08:00  INFO 20440 --- [oms-gateway] [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-11-18T15:01:56.812+08:00  INFO 20440 --- [oms-gateway] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1794985316811 with initial instances count: 0
+2026-11-18T15:01:56.814+08:00  INFO 20440 --- [oms-gateway] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application OMS-GATEWAY with eureka with status UP
+2026-11-18T15:01:56.814+08:00  INFO 20440 --- [oms-gateway] [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1794985316814, current=UP, previous=STARTING]
+2026-11-18T15:01:56.816+08:00  INFO 20440 --- [oms-gateway] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_OMS-GATEWAY/oms-gateway:8092: registering service...
+2026-11-18T15:01:56.918+08:00  INFO 20440 --- [oms-gateway] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_OMS-GATEWAY/oms-gateway:8092 - registration status: 204
+2026-11-18T15:01:57.134+08:00  INFO 20440 --- [oms-gateway] [           main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8092
+2026-11-18T15:01:57.139+08:00  INFO 20440 --- [oms-gateway] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8092
+2026-11-18T15:01:57.304+08:00  INFO 20440 --- [oms-gateway] [           main] c.jim.oms.gateway.OmsGatewayApplication  : Started OmsGatewayApplication in 5.784 seconds (process running for 6.321)
+2026-11-18T15:02:26.807+08:00  INFO 20440 --- [oms-gateway] [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-11-18T15:02:26.808+08:00  INFO 20440 --- [oms-gateway] [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-11-18T15:02:26.808+08:00  INFO 20440 --- [oms-gateway] [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-11-18T15:02:26.809+08:00  INFO 20440 --- [oms-gateway] [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-11-18T15:02:26.811+08:00  INFO 20440 --- [oms-gateway] [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-11-18T15:02:26.811+08:00  INFO 20440 --- [oms-gateway] [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2026-11-18T15:02:26.811+08:00  INFO 20440 --- [oms-gateway] [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-11-18T15:02:26.832+08:00  INFO 20440 --- [oms-gateway] [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-11-18T15:06:56.258+08:00  INFO 20440 --- [oms-gateway] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-18T15:11:56.262+08:00  INFO 20440 --- [oms-gateway] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration

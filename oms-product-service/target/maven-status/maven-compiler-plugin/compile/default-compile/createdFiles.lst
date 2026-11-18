@@ -1,0 +1,5 @@
+com\jim\oms\product\ProductServiceApplication.class
+com\jim\oms\product\mapper\ProductMapper.class
+com\jim\oms\product\service\ProductService.class
+com\jim\oms\product\entity\Product.class
+com\jim\oms\product\controller\ProductController.class

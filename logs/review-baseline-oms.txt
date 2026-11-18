@@ -1,0 +1,13 @@
+﻿mysql.exe : mysql: [Warning] Using a password on the command line interface can be insecure.
+所在位置 行:1 字符: 51
++ ... mysql.exe'; & $mysql -uroot -proot -e "SELECT 'oms_order' t, COUNT(*) ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (mysql: [Warning...an be insecure.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+t	c
+oms_order	0
+oms_item	0
+oms_task	0
+oms_event	0
+oms_product	1

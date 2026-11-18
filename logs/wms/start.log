@@ -1,0 +1,19 @@
+﻿--- 中间件检查 ---
+  中间件端口 3306 在线
+  中间件端口 6379 在线
+  中间件端口 9092 在线
+  已启动 wms-eureka-server，PID=34092
+  已启动 wms-admin-service，PID=25672
+  已启动 wms-inventory-service，PID=35516
+  已启动 wms-inbound-service，PID=16508
+  已启动 wms-outbound-service，PID=27240
+  已启动 wms-integration-service，PID=4896
+  已启动 wms-report-service，PID=32188
+--- WMS 夹具状态 ---
+  UP    wms-eureka-server  8761
+  UP    wms-admin-service  8081
+  UP    wms-inventory-service  8082
+  UP    wms-inbound-service  8083
+  UP    wms-outbound-service  8084
+  UP    wms-integration-service  8089
+  UP    wms-report-service  8088

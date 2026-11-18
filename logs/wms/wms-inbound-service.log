@@ -1,0 +1,207 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.5)
+
+2026-11-18T15:00:09.600+08:00  INFO 33624 --- [wms-inbound-service] [           main] c.j.w.inbound.InboundServiceApplication  : Starting InboundServiceApplication v1.0.0 using Java 17.0.21 with PID 33624 (D:\wms\wms-backend\wms-inbound-service\target\wms-inbound-service-1.0.0.jar started by 华为 in D:\wms\wms-backend)
+2026-11-18T15:00:09.605+08:00 DEBUG 33624 --- [wms-inbound-service] [           main] c.j.w.inbound.InboundServiceApplication  : Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-11-18T15:00:09.606+08:00  INFO 33624 --- [wms-inbound-service] [           main] c.j.w.inbound.InboundServiceApplication  : No active profile set, falling back to 1 default profile: "default"
+2026-11-18T15:00:10.906+08:00  INFO 33624 --- [wms-inbound-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-11-18T15:00:10.910+08:00  INFO 33624 --- [wms-inbound-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-11-18T15:00:10.934+08:00  INFO 33624 --- [wms-inbound-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
+2026-11-18T15:00:11.322+08:00  INFO 33624 --- [wms-inbound-service] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=c6b39a12-60d4-3590-9a0d-ab8f0cb43840
+2026-11-18T15:00:11.765+08:00  WARN 33624 --- [wms-inbound-service] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-11-18T15:00:11.772+08:00  WARN 33624 --- [wms-inbound-service] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-11-18T15:00:12.385+08:00  INFO 33624 --- [wms-inbound-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8083 (http)
+2026-11-18T15:00:12.427+08:00  INFO 33624 --- [wms-inbound-service] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-18T15:00:12.430+08:00  INFO 33624 --- [wms-inbound-service] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-11-18T15:00:12.557+08:00  INFO 33624 --- [wms-inbound-service] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-11-18T15:00:12.561+08:00  INFO 33624 --- [wms-inbound-service] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2840 ms
+2026-11-18T15:00:13.166+08:00  INFO 33624 --- [wms-inbound-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-11-18T15:00:13.628+08:00  INFO 33624 --- [wms-inbound-service] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1c7f6e96
+2026-11-18T15:00:13.636+08:00  INFO 33624 --- [wms-inbound-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-11-18T15:00:13.975+08:00  INFO 33624 --- [wms-inbound-service] [           main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.22.3 by Redgate
+2026-11-18T15:00:13.977+08:00  INFO 33624 --- [wms-inbound-service] [           main] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
+2026-11-18T15:00:13.978+08:00  INFO 33624 --- [wms-inbound-service] [           main] o.f.c.internal.license.VersionPrinter    : 
+2026-11-18T15:00:14.011+08:00  INFO 33624 --- [wms-inbound-service] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://127.0.0.1:3306/jim_wms_inbound (MySQL 8.0)
+2026-11-18T15:00:14.109+08:00  INFO 33624 --- [wms-inbound-service] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.056s)
+2026-11-18T15:00:14.132+08:00  INFO 33624 --- [wms-inbound-service] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema `jim_wms_inbound`: 2
+2026-11-18T15:00:14.145+08:00  INFO 33624 --- [wms-inbound-service] [           main] o.f.core.internal.command.DbMigrate      : Schema `jim_wms_inbound` is up to date. No migration necessary.
+2026-11-18T15:00:15.003+08:00  INFO 33624 --- [wms-inbound-service] [           main] o.s.c.openfeign.FeignClientFactoryBean   : For 'wms-inventory-service' URL not provided. Will try picking an instance via load-balancing.
+2026-11-18T15:00:17.191+08:00  INFO 33624 --- [wms-inbound-service] [           main] com.jim.wms.common.lock.RedisLockUtil    : Redis 锁通道就绪（127.0.0.1:6379:0），PING=PONG
+2026-11-18T15:00:17.954+08:00  INFO 33624 --- [wms-inbound-service] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2026-11-18T15:00:17.998+08:00  WARN 33624 --- [wms-inbound-service] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-11-18T15:00:18.051+08:00  INFO 33624 --- [wms-inbound-service] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-11-18T15:00:18.168+08:00  INFO 33624 --- [wms-inbound-service] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-11-18T15:00:18.178+08:00  INFO 33624 --- [wms-inbound-service] [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-18T15:00:18.213+08:00  INFO 33624 --- [wms-inbound-service] [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-11-18T15:00:18.216+08:00  INFO 33624 --- [wms-inbound-service] [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-11-18T15:00:18.216+08:00  INFO 33624 --- [wms-inbound-service] [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-11-18T15:00:18.217+08:00  INFO 33624 --- [wms-inbound-service] [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-11-18T15:00:18.217+08:00  INFO 33624 --- [wms-inbound-service] [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-11-18T15:00:18.217+08:00  INFO 33624 --- [wms-inbound-service] [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-11-18T15:00:18.218+08:00  INFO 33624 --- [wms-inbound-service] [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-11-18T15:00:18.624+08:00  INFO 33624 --- [wms-inbound-service] [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-11-18T15:00:18.629+08:00  INFO 33624 --- [wms-inbound-service] [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 10
+2026-11-18T15:00:18.632+08:00  INFO 33624 --- [wms-inbound-service] [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-11-18T15:00:18.636+08:00  INFO 33624 --- [wms-inbound-service] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1794985218636 with initial instances count: 1
+2026-11-18T15:00:18.640+08:00  INFO 33624 --- [wms-inbound-service] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application WMS-INBOUND-SERVICE with eureka with status UP
+2026-11-18T15:00:18.641+08:00  INFO 33624 --- [wms-inbound-service] [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1794985218641, current=UP, previous=STARTING]
+2026-11-18T15:00:18.643+08:00  INFO 33624 --- [wms-inbound-service] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WMS-INBOUND-SERVICE/wms-inbound-service:8083: registering service...
+2026-11-18T15:00:18.658+08:00  INFO 33624 --- [wms-inbound-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8083 (http) with context path ''
+2026-11-18T15:00:18.661+08:00  INFO 33624 --- [wms-inbound-service] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8083
+2026-11-18T15:00:18.685+08:00  INFO 33624 --- [wms-inbound-service] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WMS-INBOUND-SERVICE/wms-inbound-service:8083 - registration status: 204
+2026-11-18T15:00:18.727+08:00  INFO 33624 --- [wms-inbound-service] [           main] c.j.w.inbound.InboundServiceApplication  : Started InboundServiceApplication in 9.834 seconds (process running for 10.438)
+2026-11-18T15:01:08.124+08:00  INFO 33624 --- [wms-inbound-service] [nio-8083-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-18T15:01:08.126+08:00  INFO 33624 --- [wms-inbound-service] [nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-11-18T15:01:08.129+08:00  INFO 33624 --- [wms-inbound-service] [nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-11-18T15:01:08.558+08:00 DEBUG 33624 --- [wms-inbound-service] [nio-8083-exec-1] c.j.w.i.m.InboundOrderMapper.insert      : ==>  Preparing: INSERT INTO wms_inbound_order ( inbound_no, inbound_type, source_system, source_no, warehouse_code, status, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ? )
+2026-11-18T15:01:08.578+08:00 DEBUG 33624 --- [wms-inbound-service] [nio-8083-exec-1] c.j.w.i.m.InboundOrderMapper.insert      : ==> Parameters: IN1794985268271(String), PURCHASE(String), DEMO(String), DEMO-PO-OMS-150107(String), DC01(String), CREATED(String), 2026-11-18T15:01:08.273029300(LocalDateTime), 2026-11-18T15:01:08.273029300(LocalDateTime)
+2026-11-18T15:01:08.583+08:00 DEBUG 33624 --- [wms-inbound-service] [nio-8083-exec-1] c.j.w.i.m.InboundOrderMapper.insert      : <==    Updates: 1
+2026-11-18T15:01:08.593+08:00 DEBUG 33624 --- [wms-inbound-service] [nio-8083-exec-1] c.j.w.i.m.InboundOrderItemMapper.insert  : ==>  Preparing: INSERT INTO wms_inbound_item ( inbound_no, sku_code, batch_no, expect_qty, received_qty, putaway_qty, qc_status ) VALUES ( ?, ?, ?, ?, ?, ?, ? )
+2026-11-18T15:01:08.594+08:00 DEBUG 33624 --- [wms-inbound-service] [nio-8083-exec-1] c.j.w.i.m.InboundOrderItemMapper.insert  : ==> Parameters: IN1794985268271(String), SKU-001(String), B-DEMO(String), 20(BigDecimal), 0(BigDecimal), 0(BigDecimal), PENDING(String)
+2026-11-18T15:01:08.595+08:00 DEBUG 33624 --- [wms-inbound-service] [nio-8083-exec-1] c.j.w.i.m.InboundOrderItemMapper.insert  : <==    Updates: 1
+2026-11-18T15:01:08.742+08:00 DEBUG 33624 --- [wms-inbound-service] [nio-8083-exec-2] c.j.w.i.m.InboundOrderMapper.selectList  : ==>  Preparing: SELECT id,inbound_no,inbound_type,source_system,source_no,warehouse_code,status,create_time,update_time FROM wms_inbound_order WHERE (inbound_no = ?)
+2026-11-18T15:01:08.745+08:00 DEBUG 33624 --- [wms-inbound-service] [nio-8083-exec-2] c.j.w.i.m.InboundOrderMapper.selectList  : ==> Parameters: IN1794985268271(String)
+2026-11-18T15:01:09.069+08:00 DEBUG 33624 --- [wms-inbound-service] [nio-8083-exec-2] c.j.w.i.m.InboundOrderMapper.selectList  : <==      Total: 1
+2026-11-18T15:01:09.076+08:00 DEBUG 33624 --- [wms-inbound-service] [nio-8083-exec-2] c.j.w.i.m.I.selectList                   : ==>  Preparing: SELECT id,inbound_no,sku_code,batch_no,expect_qty,received_qty,putaway_qty,location_code,qc_status FROM wms_inbound_item WHERE (inbound_no = ? AND sku_code = ?)
+2026-11-18T15:01:09.077+08:00 DEBUG 33624 --- [wms-inbound-service] [nio-8083-exec-2] c.j.w.i.m.I.selectList                   : ==> Parameters: IN1794985268271(String), SKU-001(String)
+2026-11-18T15:01:09.081+08:00 DEBUG 33624 --- [wms-inbound-service] [nio-8083-exec-2] c.j.w.i.m.I.selectList                   : <==      Total: 1
+2026-11-18T15:01:09.085+08:00 DEBUG 33624 --- [wms-inbound-service] [nio-8083-exec-2] c.j.w.i.m.I.updateById                   : ==>  Preparing: UPDATE wms_inbound_item SET inbound_no=?, sku_code=?, batch_no=?, expect_qty=?, received_qty=?, putaway_qty=?, qc_status=? WHERE id=?
+2026-11-18T15:01:09.087+08:00 DEBUG 33624 --- [wms-inbound-service] [nio-8083-exec-2] c.j.w.i.m.I.updateById                   : ==> Parameters: IN1794985268271(String), SKU-001(String), B-DEMO(String), 20.000(BigDecimal), 20.000(BigDecimal), 0.000(BigDecimal), PENDING(String), 7(Long)
+2026-11-18T15:01:09.091+08:00 DEBUG 33624 --- [wms-inbound-service] [nio-8083-exec-2] c.j.w.i.m.I.updateById                   : <==    Updates: 1
+2026-11-18T15:01:09.094+08:00 DEBUG 33624 --- [wms-inbound-service] [nio-8083-exec-2] c.j.w.i.m.InboundOrderMapper.updateById  : ==>  Preparing: UPDATE wms_inbound_order SET inbound_no=?, inbound_type=?, source_system=?, source_no=?, warehouse_code=?, status=?, create_time=?, update_time=? WHERE id=?
+2026-11-18T15:01:09.095+08:00 DEBUG 33624 --- [wms-inbound-service] [nio-8083-exec-2] c.j.w.i.m.InboundOrderMapper.updateById  : ==> Parameters: IN1794985268271(String), PURCHASE(String), DEMO(String), DEMO-PO-OMS-150107(String), DC01(String), RECEIVED(String), 2026-11-18T15:01:08(LocalDateTime), 2026-11-18T15:01:09.091032400(LocalDateTime), 8(Long)
+2026-11-18T15:01:09.098+08:00 DEBUG 33624 --- [wms-inbound-service] [nio-8083-exec-2] c.j.w.i.m.InboundOrderMapper.updateById  : <==    Updates: 1
+2026-11-18T15:01:09.116+08:00 DEBUG 33624 --- [wms-inbound-service] [nio-8083-exec-3] c.j.w.i.m.I.selectList                   : ==>  Preparing: SELECT id,inbound_no,sku_code,batch_no,expect_qty,received_qty,putaway_qty,location_code,qc_status FROM wms_inbound_item WHERE (inbound_no = ? AND sku_code = ?)
+2026-11-18T15:01:09.118+08:00 DEBUG 33624 --- [wms-inbound-service] [nio-8083-exec-3] c.j.w.i.m.I.selectList                   : ==> Parameters: IN1794985268271(String), SKU-001(String)
+2026-11-18T15:01:09.122+08:00 DEBUG 33624 --- [wms-inbound-service] [nio-8083-exec-3] c.j.w.i.m.I.selectList                   : <==      Total: 1
+2026-11-18T15:01:09.124+08:00 DEBUG 33624 --- [wms-inbound-service] [nio-8083-exec-3] c.j.w.i.m.I.updateById                   : ==>  Preparing: UPDATE wms_inbound_item SET inbound_no=?, sku_code=?, batch_no=?, expect_qty=?, received_qty=?, putaway_qty=?, qc_status=? WHERE id=?
+2026-11-18T15:01:09.125+08:00 DEBUG 33624 --- [wms-inbound-service] [nio-8083-exec-3] c.j.w.i.m.I.updateById                   : ==> Parameters: IN1794985268271(String), SKU-001(String), B-DEMO(String), 20.000(BigDecimal), 20.000(BigDecimal), 0.000(BigDecimal), PASS(String), 7(Long)
+2026-11-18T15:01:09.127+08:00 DEBUG 33624 --- [wms-inbound-service] [nio-8083-exec-3] c.j.w.i.m.I.updateById                   : <==    Updates: 1
+2026-11-18T15:01:09.144+08:00 DEBUG 33624 --- [wms-inbound-service] [nio-8083-exec-4] c.j.w.i.m.InboundOrderMapper.selectList  : ==>  Preparing: SELECT id,inbound_no,inbound_type,source_system,source_no,warehouse_code,status,create_time,update_time FROM wms_inbound_order WHERE (inbound_no = ?)
+2026-11-18T15:01:09.146+08:00 DEBUG 33624 --- [wms-inbound-service] [nio-8083-exec-4] c.j.w.i.m.InboundOrderMapper.selectList  : ==> Parameters: IN1794985268271(String)
+2026-11-18T15:01:09.149+08:00 DEBUG 33624 --- [wms-inbound-service] [nio-8083-exec-4] c.j.w.i.m.InboundOrderMapper.selectList  : <==      Total: 1
+2026-11-18T15:01:09.153+08:00 DEBUG 33624 --- [wms-inbound-service] [nio-8083-exec-4] c.j.w.i.m.I.selectList                   : ==>  Preparing: SELECT id,inbound_no,sku_code,batch_no,expect_qty,received_qty,putaway_qty,location_code,qc_status FROM wms_inbound_item WHERE (inbound_no = ? AND sku_code = ?)
+2026-11-18T15:01:09.155+08:00 DEBUG 33624 --- [wms-inbound-service] [nio-8083-exec-4] c.j.w.i.m.I.selectList                   : ==> Parameters: IN1794985268271(String), SKU-001(String)
+2026-11-18T15:01:09.160+08:00 DEBUG 33624 --- [wms-inbound-service] [nio-8083-exec-4] c.j.w.i.m.I.selectList                   : <==      Total: 1
+2026-11-18T15:01:09.670+08:00 DEBUG 33624 --- [wms-inbound-service] [nio-8083-exec-4] c.j.w.i.m.I.updateById                   : ==>  Preparing: UPDATE wms_inbound_item SET inbound_no=?, sku_code=?, batch_no=?, expect_qty=?, received_qty=?, putaway_qty=?, location_code=?, qc_status=? WHERE id=?
+2026-11-18T15:01:09.671+08:00 DEBUG 33624 --- [wms-inbound-service] [nio-8083-exec-4] c.j.w.i.m.I.updateById                   : ==> Parameters: IN1794985268271(String), SKU-001(String), B-DEMO(String), 20.000(BigDecimal), 20.000(BigDecimal), 20.000(BigDecimal), DC01-A-01-01(String), PASS(String), 7(Long)
+2026-11-18T15:01:09.673+08:00 DEBUG 33624 --- [wms-inbound-service] [nio-8083-exec-4] c.j.w.i.m.I.updateById                   : <==    Updates: 1
+2026-11-18T15:01:09.675+08:00 DEBUG 33624 --- [wms-inbound-service] [nio-8083-exec-4] c.j.w.i.m.InboundOrderMapper.updateById  : ==>  Preparing: UPDATE wms_inbound_order SET inbound_no=?, inbound_type=?, source_system=?, source_no=?, warehouse_code=?, status=?, create_time=?, update_time=? WHERE id=?
+2026-11-18T15:01:09.676+08:00 DEBUG 33624 --- [wms-inbound-service] [nio-8083-exec-4] c.j.w.i.m.InboundOrderMapper.updateById  : ==> Parameters: IN1794985268271(String), PURCHASE(String), DEMO(String), DEMO-PO-OMS-150107(String), DC01(String), PUTAWAY(String), 2026-11-18T15:01:08(LocalDateTime), 2026-11-18T15:01:09.674169100(LocalDateTime), 8(Long)
+2026-11-18T15:01:09.677+08:00 DEBUG 33624 --- [wms-inbound-service] [nio-8083-exec-4] c.j.w.i.m.InboundOrderMapper.updateById  : <==    Updates: 1
+2026-11-18T15:01:09.680+08:00 DEBUG 33624 --- [wms-inbound-service] [nio-8083-exec-4] c.j.w.i.m.I.selectList                   : ==>  Preparing: SELECT id,inbound_no,sku_code,batch_no,expect_qty,received_qty,putaway_qty,location_code,qc_status FROM wms_inbound_item WHERE (inbound_no = ?)
+2026-11-18T15:01:09.684+08:00 DEBUG 33624 --- [wms-inbound-service] [nio-8083-exec-4] c.j.w.i.m.I.selectList                   : ==> Parameters: IN1794985268271(String)
+2026-11-18T15:01:09.687+08:00 DEBUG 33624 --- [wms-inbound-service] [nio-8083-exec-4] c.j.w.i.m.I.selectList                   : <==      Total: 1
+2026-11-18T15:01:09.689+08:00 DEBUG 33624 --- [wms-inbound-service] [nio-8083-exec-4] c.j.w.i.m.InboundOrderMapper.updateById  : ==>  Preparing: UPDATE wms_inbound_order SET inbound_no=?, inbound_type=?, source_system=?, source_no=?, warehouse_code=?, status=?, create_time=?, update_time=? WHERE id=?
+2026-11-18T15:01:09.690+08:00 DEBUG 33624 --- [wms-inbound-service] [nio-8083-exec-4] c.j.w.i.m.InboundOrderMapper.updateById  : ==> Parameters: IN1794985268271(String), PURCHASE(String), DEMO(String), DEMO-PO-OMS-150107(String), DC01(String), FINISHED(String), 2026-11-18T15:01:08(LocalDateTime), 2026-11-18T15:01:09.674169100(LocalDateTime), 8(Long)
+2026-11-18T15:01:09.692+08:00 DEBUG 33624 --- [wms-inbound-service] [nio-8083-exec-4] c.j.w.i.m.InboundOrderMapper.updateById  : <==    Updates: 1
+2026-11-18T15:01:09.697+08:00  INFO 33624 --- [wms-inbound-service] [nio-8083-exec-4] com.jim.wms.common.outbox.OutboxWriter   : 发件箱已登记 topic=wms-order-status, eventKey=IN1794985268271
+2026-11-18T15:01:09.698+08:00  INFO 33624 --- [wms-inbound-service] [nio-8083-exec-4] c.j.w.i.service.impl.InboundServiceImpl  : 入库单完成，inboundNo=IN1794985268271
+2026-11-18T15:01:10.389+08:00  INFO 33624 --- [wms-inbound-service] [   scheduling-1] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [127.0.0.1:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 5000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 1000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 3000
+	retries = 3
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2026-11-18T15:01:10.419+08:00  INFO 33624 --- [wms-inbound-service] [   scheduling-1] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Instantiated an idempotent producer.
+2026-11-18T15:01:10.473+08:00  INFO 33624 --- [wms-inbound-service] [   scheduling-1] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.6.2
+2026-11-18T15:01:10.473+08:00  INFO 33624 --- [wms-inbound-service] [   scheduling-1] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: c4deed513057c94e
+2026-11-18T15:01:10.474+08:00  INFO 33624 --- [wms-inbound-service] [   scheduling-1] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1794985270468
+2026-11-18T15:01:10.792+08:00  INFO 33624 --- [wms-inbound-service] [ad | producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Cluster ID: It0Yw3kSTE6CgjNgvc67hg
+2026-11-18T15:01:10.796+08:00  INFO 33624 --- [wms-inbound-service] [ad | producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-1] ProducerId set to 1020 with epoch 0
+2026-11-18T15:01:10.838+08:00  INFO 33624 --- [wms-inbound-service] [   scheduling-1] com.jim.wms.common.outbox.OutboxRelay    : 发件箱投递成功 id=3, topic=wms-order-status, eventKey=IN1794985268271
+2026-11-18T15:01:10.840+08:00  INFO 33624 --- [wms-inbound-service] [   scheduling-1] com.jim.wms.common.outbox.OutboxRelay    : 发件箱本轮投递处理 1 条，owner=wms-inbound-service:8083
+2026-11-18T15:05:18.228+08:00  INFO 33624 --- [wms-inbound-service] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-18T15:10:11.468+08:00  INFO 33624 --- [wms-inbound-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2026-11-18T15:10:18.240+08:00  INFO 33624 --- [wms-inbound-service] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-18T15:15:18.245+08:00  INFO 33624 --- [wms-inbound-service] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration

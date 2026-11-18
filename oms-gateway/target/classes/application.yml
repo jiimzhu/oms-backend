@@ -1,0 +1,36 @@
+server:
+  port: 8092
+
+spring:
+  application:
+    name: oms-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: oms-product-service
+          uri: lb://oms-product-service
+          predicates:
+            - Path=/product/**
+          filters:
+            - RewritePath=/product/(?<rest>.*), /api/products/${rest}
+        - id: oms-order-service
+          uri: lb://oms-order-service
+          predicates:
+            - Path=/order/**
+          filters:
+            - RewritePath=/order/(?<rest>.*), /api/orders/${rest}
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8762/eureka/
+  instance:
+    instance-id: ${spring.application.name}:${server.port}
+    prefer-ip-address: true
+    ip-address: 127.0.0.1
+    lease-renewal-interval-in-seconds: 10
+    lease-expiration-duration-in-seconds: 30
+
+logging:
+  level:
+    com.jim.oms: debug

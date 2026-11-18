@@ -1,0 +1,13 @@
+﻿--- 启动前中间件检查 ---
+  中间件端口 3306 在线
+  中间件端口 6379 在线
+  中间件端口 9092 在线
+  跳过 oms-eureka-server：端口 8762 已被占用
+  跳过 oms-product-service：端口 8090 已被占用
+  已启动 oms-order-service，PID=27348，jar=oms-order-service-1.0.0.jar
+  跳过 oms-gateway：端口 8092 已被占用
+--- 当前状态 ---
+  UP    oms-eureka-server  8762
+  UP    oms-product-service  8090
+  UP    oms-order-service  8091
+  UP    oms-gateway  8092

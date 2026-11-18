@@ -1,0 +1,5 @@
+Option --property is deprecated and will be removed in a future version. Use --formatter-property instead.
+OUT1794984144096|{"orderNo":"OUT1794984144096","message":"部分出库","status":"PICKED"}
+2026-11-18T07:14:31.950264600Z main ERROR Error processing message, terminating consumer process: 
+org.apache.kafka.common.errors.TimeoutException
+

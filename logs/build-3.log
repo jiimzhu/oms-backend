@@ -1,0 +1,80 @@
+﻿[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] oms-parent                                                         [pom]
+[INFO] oms-common                                                         [jar]
+[INFO] oms-order-service                                                  [jar]
+[INFO] 
+[INFO] -------------------------< com.jim:oms-parent >-------------------------
+[INFO] Building oms-parent 1.0.0                                          [1/3]
+[INFO]   from pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] -------------------------< com.jim:oms-common >-------------------------
+[INFO] Building oms-common 1.0.0                                          [2/3]
+[INFO]   from oms-common\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ oms-common ---
+[INFO] skip non existing resourceDirectory D:\oms-new\oms-common\src\main\resources
+[INFO] skip non existing resourceDirectory D:\oms-new\oms-common\src\main\resources
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ oms-common ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ oms-common ---
+[INFO] skip non existing resourceDirectory D:\oms-new\oms-common\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ oms-common ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:3.1.2:test (default-test) @ oms-common ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jar:3.3.0:jar (default-jar) @ oms-common ---
+[INFO] 
+[INFO] ---------------------< com.jim:oms-order-service >----------------------
+[INFO] Building oms-order-service 1.0.0                                   [3/3]
+[INFO]   from oms-order-service\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ oms-order-service ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ oms-order-service ---
+[INFO] Changes detected - recompiling the module! :source
+[INFO] Compiling 22 source files with javac [debug release 17] to target\classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ oms-order-service ---
+[INFO] skip non existing resourceDirectory D:\oms-new\oms-order-service\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ oms-order-service ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:3.1.2:test (default-test) @ oms-order-service ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jar:3.3.0:jar (default-jar) @ oms-order-service ---
+[INFO] Building jar: D:\oms-new\oms-order-service\target\oms-order-service-1.0.0.jar
+[INFO] 
+[INFO] --- spring-boot:3.2.5:repackage (repackage) @ oms-order-service ---
+[INFO] Replacing main artifact D:\oms-new\oms-order-service\target\oms-order-service-1.0.0.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to D:\oms-new\oms-order-service\target\oms-order-service-1.0.0.jar.original
+[INFO] 
+[INFO] --- spring-boot:3.2.5:repackage (default) @ oms-order-service ---
+[INFO] Replacing main artifact D:\oms-new\oms-order-service\target\oms-order-service-1.0.0.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to D:\oms-new\oms-order-service\target\oms-order-service-1.0.0.jar.original
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for oms-parent 1.0.0:
+[INFO] 
+[INFO] oms-parent ......................................... SUCCESS [  0.003 s]
+[INFO] oms-common ......................................... SUCCESS [  1.365 s]
+[INFO] oms-order-service .................................. SUCCESS [  5.663 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  7.539 s
+[INFO] Finished at: 2026-11-18T14:12:15+08:00
+[INFO] ------------------------------------------------------------------------

@@ -1,0 +1,14 @@
+com\jim\oms\common\dto\OrderCreateRequest$Item.class
+com\jim\oms\common\constant\WmsOrderStatus.class
+com\jim\oms\common\dto\WmsOutboundOrderCmd.class
+com\jim\oms\common\event\WmsOrderStatusEvent.class
+com\jim\oms\common\dto\ProductUpsertRequest.class
+com\jim\oms\common\constant\Topics.class
+com\jim\oms\common\dto\WmsOutboundCancelCmd.class
+com\jim\oms\common\result\Result.class
+com\jim\oms\common\exception\GlobalExceptionHandler.class
+com\jim\oms\common\constant\OmsOrderStatus.class
+com\jim\oms\common\dto\WmsOutboundOrderCmd$Item.class
+com\jim\oms\common\dto\OrderCreateRequest.class
+com\jim\oms\common\dto\WmsResult.class
+com\jim\oms\common\exception\BusinessException.class

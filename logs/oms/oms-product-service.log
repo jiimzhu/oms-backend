@@ -1,0 +1,90 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.5)
+
+2026-11-18T15:01:31.547+08:00  INFO 17096 --- [oms-product-service] [           main] c.j.o.product.ProductServiceApplication  : Starting ProductServiceApplication v1.0.0 using Java 17.0.21 with PID 17096 (D:\oms-new\oms-product-service\target\oms-product-service-1.0.0.jar started by 华为 in D:\oms-new)
+2026-11-18T15:01:31.552+08:00 DEBUG 17096 --- [oms-product-service] [           main] c.j.o.product.ProductServiceApplication  : Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-11-18T15:01:31.555+08:00  INFO 17096 --- [oms-product-service] [           main] c.j.o.product.ProductServiceApplication  : No active profile set, falling back to 1 default profile: "default"
+2026-11-18T15:01:32.937+08:00  INFO 17096 --- [oms-product-service] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=12aab061-8f6d-31cf-9722-76f67500e51f
+2026-11-18T15:01:33.184+08:00  WARN 17096 --- [oms-product-service] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-11-18T15:01:33.190+08:00  WARN 17096 --- [oms-product-service] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-11-18T15:01:33.699+08:00  INFO 17096 --- [oms-product-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8090 (http)
+2026-11-18T15:01:33.719+08:00  INFO 17096 --- [oms-product-service] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-18T15:01:33.722+08:00  INFO 17096 --- [oms-product-service] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-11-18T15:01:33.810+08:00  INFO 17096 --- [oms-product-service] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-11-18T15:01:33.815+08:00  INFO 17096 --- [oms-product-service] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2154 ms
+2026-11-18T15:01:34.312+08:00  INFO 17096 --- [oms-product-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-11-18T15:01:34.802+08:00  INFO 17096 --- [oms-product-service] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@256bb5be
+2026-11-18T15:01:34.807+08:00  INFO 17096 --- [oms-product-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-11-18T15:01:34.998+08:00  INFO 17096 --- [oms-product-service] [           main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.22.3 by Redgate
+2026-11-18T15:01:35.000+08:00  INFO 17096 --- [oms-product-service] [           main] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
+2026-11-18T15:01:35.000+08:00  INFO 17096 --- [oms-product-service] [           main] o.f.c.internal.license.VersionPrinter    : 
+2026-11-18T15:01:35.034+08:00  INFO 17096 --- [oms-product-service] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://127.0.0.1:3306/jim_oms_product (MySQL 8.0)
+2026-11-18T15:01:35.124+08:00  INFO 17096 --- [oms-product-service] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.048s)
+2026-11-18T15:01:35.156+08:00  INFO 17096 --- [oms-product-service] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema `jim_oms_product`: 1
+2026-11-18T15:01:35.167+08:00  INFO 17096 --- [oms-product-service] [           main] o.f.core.internal.command.DbMigrate      : Schema `jim_oms_product` is up to date. No migration necessary.
+2026-11-18T15:01:36.733+08:00  INFO 17096 --- [oms-product-service] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2026-11-18T15:01:36.803+08:00  WARN 17096 --- [oms-product-service] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-11-18T15:01:36.847+08:00  INFO 17096 --- [oms-product-service] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-11-18T15:01:36.987+08:00  INFO 17096 --- [oms-product-service] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-11-18T15:01:36.998+08:00  INFO 17096 --- [oms-product-service] [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-18T15:01:37.041+08:00  INFO 17096 --- [oms-product-service] [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-11-18T15:01:37.043+08:00  INFO 17096 --- [oms-product-service] [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-11-18T15:01:37.043+08:00  INFO 17096 --- [oms-product-service] [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-11-18T15:01:37.043+08:00  INFO 17096 --- [oms-product-service] [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-11-18T15:01:37.044+08:00  INFO 17096 --- [oms-product-service] [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-11-18T15:01:37.044+08:00  INFO 17096 --- [oms-product-service] [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-11-18T15:01:37.044+08:00  INFO 17096 --- [oms-product-service] [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-11-18T15:01:37.757+08:00  INFO 17096 --- [oms-product-service] [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-11-18T15:01:37.759+08:00  INFO 17096 --- [oms-product-service] [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 10
+2026-11-18T15:01:37.767+08:00  INFO 17096 --- [oms-product-service] [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-11-18T15:01:37.775+08:00  INFO 17096 --- [oms-product-service] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1794985297775 with initial instances count: 0
+2026-11-18T15:01:37.778+08:00  INFO 17096 --- [oms-product-service] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application OMS-PRODUCT-SERVICE with eureka with status UP
+2026-11-18T15:01:37.778+08:00  INFO 17096 --- [oms-product-service] [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1794985297778, current=UP, previous=STARTING]
+2026-11-18T15:01:37.779+08:00  INFO 17096 --- [oms-product-service] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_OMS-PRODUCT-SERVICE/oms-product-service:8090: registering service...
+2026-11-18T15:01:37.804+08:00  INFO 17096 --- [oms-product-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8090 (http) with context path ''
+2026-11-18T15:01:37.807+08:00  INFO 17096 --- [oms-product-service] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8090
+2026-11-18T15:01:37.878+08:00  INFO 17096 --- [oms-product-service] [           main] c.j.o.product.ProductServiceApplication  : Started ProductServiceApplication in 6.964 seconds (process running for 7.497)
+2026-11-18T15:01:37.909+08:00  INFO 17096 --- [oms-product-service] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_OMS-PRODUCT-SERVICE/oms-product-service:8090 - registration status: 204
+2026-11-18T15:02:07.761+08:00  INFO 17096 --- [oms-product-service] [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-11-18T15:02:07.764+08:00  INFO 17096 --- [oms-product-service] [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-11-18T15:02:07.764+08:00  INFO 17096 --- [oms-product-service] [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-11-18T15:02:07.764+08:00  INFO 17096 --- [oms-product-service] [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-11-18T15:02:07.765+08:00  INFO 17096 --- [oms-product-service] [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-11-18T15:02:07.765+08:00  INFO 17096 --- [oms-product-service] [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2026-11-18T15:02:07.765+08:00  INFO 17096 --- [oms-product-service] [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-11-18T15:02:07.788+08:00  INFO 17096 --- [oms-product-service] [freshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-11-18T15:02:31.954+08:00  INFO 17096 --- [oms-product-service] [nio-8090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-18T15:02:31.955+08:00  INFO 17096 --- [oms-product-service] [nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-11-18T15:02:31.958+08:00  INFO 17096 --- [oms-product-service] [nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-11-18T15:02:32.066+08:00 DEBUG 17096 --- [oms-product-service] [nio-8090-exec-1] c.j.o.p.mapper.ProductMapper.selectList  : ==>  Preparing: SELECT id,oms_sku_code,name,price,wms_sku_code,warehouse_code,location_code,batch_no,enabled,create_time,update_time FROM oms_product ORDER BY oms_sku_code ASC
+2026-11-18T15:02:32.077+08:00 DEBUG 17096 --- [oms-product-service] [nio-8090-exec-1] c.j.o.p.mapper.ProductMapper.selectList  : ==> Parameters: 
+2026-11-18T15:02:32.094+08:00 DEBUG 17096 --- [oms-product-service] [nio-8090-exec-1] c.j.o.p.mapper.ProductMapper.selectList  : <==      Total: 1
+2026-11-18T15:02:32.469+08:00 DEBUG 17096 --- [oms-product-service] [nio-8090-exec-2] c.j.o.p.mapper.ProductMapper.selectList  : ==>  Preparing: SELECT id,oms_sku_code,name,price,wms_sku_code,warehouse_code,location_code,batch_no,enabled,create_time,update_time FROM oms_product ORDER BY oms_sku_code ASC
+2026-11-18T15:02:32.471+08:00 DEBUG 17096 --- [oms-product-service] [nio-8090-exec-2] c.j.o.p.mapper.ProductMapper.selectList  : ==> Parameters: 
+2026-11-18T15:02:32.474+08:00 DEBUG 17096 --- [oms-product-service] [nio-8090-exec-2] c.j.o.p.mapper.ProductMapper.selectList  : <==      Total: 1
+2026-11-18T15:02:40.320+08:00 DEBUG 17096 --- [oms-product-service] [nio-8090-exec-5] c.j.o.p.mapper.ProductMapper.selectList  : ==>  Preparing: SELECT id,oms_sku_code,name,price,wms_sku_code,warehouse_code,location_code,batch_no,enabled,create_time,update_time FROM oms_product WHERE (oms_sku_code = ?)
+2026-11-18T15:02:40.323+08:00 DEBUG 17096 --- [oms-product-service] [nio-8090-exec-5] c.j.o.p.mapper.ProductMapper.selectList  : ==> Parameters: REV-SKU-001(String)
+2026-11-18T15:02:40.324+08:00 DEBUG 17096 --- [oms-product-service] [nio-8090-exec-5] c.j.o.p.mapper.ProductMapper.selectList  : <==      Total: 0
+2026-11-18T15:02:40.331+08:00 DEBUG 17096 --- [oms-product-service] [nio-8090-exec-5] c.j.o.p.mapper.ProductMapper.insert      : ==>  Preparing: INSERT INTO oms_product ( oms_sku_code, name, price, wms_sku_code, warehouse_code, location_code, batch_no, enabled, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+2026-11-18T15:02:40.333+08:00 DEBUG 17096 --- [oms-product-service] [nio-8090-exec-5] c.j.o.p.mapper.ProductMapper.insert      : ==> Parameters: REV-SKU-001(String), 复核商品A(String), 88.5(BigDecimal), SKU-001(String), DC01(String), DC01-A-01-01(String), B-DEMO(String), 1(Integer), 2026-11-18T15:02:40.326396700(LocalDateTime), 2026-11-18T15:02:40.326396700(LocalDateTime)
+2026-11-18T15:02:40.341+08:00 DEBUG 17096 --- [oms-product-service] [nio-8090-exec-5] c.j.o.p.mapper.ProductMapper.insert      : <==    Updates: 1
+2026-11-18T15:02:51.499+08:00 DEBUG 17096 --- [oms-product-service] [nio-8090-exec-9] c.j.o.p.mapper.ProductMapper.selectList  : ==>  Preparing: SELECT id,oms_sku_code,name,price,wms_sku_code,warehouse_code,location_code,batch_no,enabled,create_time,update_time FROM oms_product WHERE (oms_sku_code = ?)
+2026-11-18T15:02:51.500+08:00 DEBUG 17096 --- [oms-product-service] [nio-8090-exec-9] c.j.o.p.mapper.ProductMapper.selectList  : ==> Parameters: REV-SKU-001(String)
+2026-11-18T15:02:51.504+08:00 DEBUG 17096 --- [oms-product-service] [nio-8090-exec-9] c.j.o.p.mapper.ProductMapper.selectList  : <==      Total: 1
+2026-11-18T15:06:37.053+08:00  INFO 17096 --- [oms-product-service] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-18T15:07:55.770+08:00 DEBUG 17096 --- [oms-product-service] [io-8090-exec-10] c.j.o.p.mapper.ProductMapper.selectList  : ==>  Preparing: SELECT id,oms_sku_code,name,price,wms_sku_code,warehouse_code,location_code,batch_no,enabled,create_time,update_time FROM oms_product WHERE (oms_sku_code = ?)
+2026-11-18T15:07:55.771+08:00 DEBUG 17096 --- [oms-product-service] [io-8090-exec-10] c.j.o.p.mapper.ProductMapper.selectList  : ==> Parameters: REV-SKU-001(String)
+2026-11-18T15:07:55.773+08:00 DEBUG 17096 --- [oms-product-service] [io-8090-exec-10] c.j.o.p.mapper.ProductMapper.selectList  : <==      Total: 1
+2026-11-18T15:08:31.326+08:00 DEBUG 17096 --- [oms-product-service] [nio-8090-exec-8] c.j.o.p.mapper.ProductMapper.selectList  : ==>  Preparing: SELECT id,oms_sku_code,name,price,wms_sku_code,warehouse_code,location_code,batch_no,enabled,create_time,update_time FROM oms_product WHERE (oms_sku_code = ?)
+2026-11-18T15:08:31.327+08:00 DEBUG 17096 --- [oms-product-service] [nio-8090-exec-8] c.j.o.p.mapper.ProductMapper.selectList  : ==> Parameters: REV-SKU-001(String)
+2026-11-18T15:08:31.329+08:00 DEBUG 17096 --- [oms-product-service] [nio-8090-exec-8] c.j.o.p.mapper.ProductMapper.selectList  : <==      Total: 1
+2026-11-18T15:10:05.161+08:00 DEBUG 17096 --- [oms-product-service] [nio-8090-exec-2] c.j.o.p.mapper.ProductMapper.selectList  : ==>  Preparing: SELECT id,oms_sku_code,name,price,wms_sku_code,warehouse_code,location_code,batch_no,enabled,create_time,update_time FROM oms_product WHERE (oms_sku_code = ?)
+2026-11-18T15:10:05.163+08:00 DEBUG 17096 --- [oms-product-service] [nio-8090-exec-2] c.j.o.p.mapper.ProductMapper.selectList  : ==> Parameters: REV-SKU-001(String)
+2026-11-18T15:10:05.165+08:00 DEBUG 17096 --- [oms-product-service] [nio-8090-exec-2] c.j.o.p.mapper.ProductMapper.selectList  : <==      Total: 1
+2026-11-18T15:11:37.068+08:00  INFO 17096 --- [oms-product-service] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration

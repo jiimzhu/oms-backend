@@ -1,0 +1,8 @@
+﻿=== 铺库存前 ===
+{"code":200,"msg":"ok","data":[{"warehouseCode":"DC01","skuCode":"SKU-001","onHandQty":9.000,"freezeQty":0.000,"availableQty":9.000}]}
+入库单号 IN1794985268271
+收货 20 件
+质检 PASS
+上架到 DC01-A-01-01
+=== 铺库存后 ===
+{"code":200,"msg":"ok","data":[{"warehouseCode":"DC01","skuCode":"SKU-001","onHandQty":29.000,"freezeQty":0.000,"availableQty":29.000}]}

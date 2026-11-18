@@ -1,0 +1,12 @@
+D:\oms-new\oms-common\src\main\java\com\jim\oms\common\dto\ProductUpsertRequest.java
+D:\oms-new\oms-common\src\main\java\com\jim\oms\common\exception\GlobalExceptionHandler.java
+D:\oms-new\oms-common\src\main\java\com\jim\oms\common\dto\WmsOutboundOrderCmd.java
+D:\oms-new\oms-common\src\main\java\com\jim\oms\common\constant\Topics.java
+D:\oms-new\oms-common\src\main\java\com\jim\oms\common\exception\BusinessException.java
+D:\oms-new\oms-common\src\main\java\com\jim\oms\common\constant\WmsOrderStatus.java
+D:\oms-new\oms-common\src\main\java\com\jim\oms\common\dto\WmsOutboundCancelCmd.java
+D:\oms-new\oms-common\src\main\java\com\jim\oms\common\constant\OmsOrderStatus.java
+D:\oms-new\oms-common\src\main\java\com\jim\oms\common\dto\OrderCreateRequest.java
+D:\oms-new\oms-common\src\main\java\com\jim\oms\common\dto\WmsResult.java
+D:\oms-new\oms-common\src\main\java\com\jim\oms\common\event\WmsOrderStatusEvent.java
+D:\oms-new\oms-common\src\main\java\com\jim\oms\common\result\Result.java

@@ -1,0 +1,7 @@
+Option --property is deprecated and will be removed in a future version. Use --formatter-property instead.
+OUT1794983899396|{"orderNo":"OUT1794983899396","message":"出库完成","status":"FINISHED"}
+OUT1794984118684|{"orderNo":"OUT1794984118684","message":"CTM 取消单据: OMS-E3-C1","status":"CANCELLED"}
+IN1794985268271|{"message":"入库完成","orderNo":"IN1794985268271","status":"FINISHED"}
+2026-11-18T07:14:45.495477900Z main ERROR Error processing message, terminating consumer process: 
+org.apache.kafka.common.errors.TimeoutException
+

@@ -1,0 +1,542 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.5)
+
+2026-11-18T15:00:22.252+08:00  INFO 24492 --- [wms-outbound-service] [           main] c.j.w.o.OutboundServiceApplication       : Starting OutboundServiceApplication v1.0.0 using Java 17.0.21 with PID 24492 (D:\wms\wms-backend\wms-outbound-service\target\wms-outbound-service-1.0.0.jar started by 华为 in D:\wms\wms-backend)
+2026-11-18T15:00:22.259+08:00 DEBUG 24492 --- [wms-outbound-service] [           main] c.j.w.o.OutboundServiceApplication       : Running with Spring Boot v3.2.5, Spring v6.1.6
+2026-11-18T15:00:22.260+08:00  INFO 24492 --- [wms-outbound-service] [           main] c.j.w.o.OutboundServiceApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-11-18T15:00:23.401+08:00  INFO 24492 --- [wms-outbound-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-11-18T15:00:23.404+08:00  INFO 24492 --- [wms-outbound-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-11-18T15:00:23.429+08:00  INFO 24492 --- [wms-outbound-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
+2026-11-18T15:00:23.822+08:00  INFO 24492 --- [wms-outbound-service] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=22b00c06-f450-389c-b3fe-25b61977d6ec
+2026-11-18T15:00:24.177+08:00  WARN 24492 --- [wms-outbound-service] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-11-18T15:00:24.187+08:00  WARN 24492 --- [wms-outbound-service] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-11-18T15:00:24.805+08:00  INFO 24492 --- [wms-outbound-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8084 (http)
+2026-11-18T15:00:24.846+08:00  INFO 24492 --- [wms-outbound-service] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-18T15:00:24.849+08:00  INFO 24492 --- [wms-outbound-service] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-11-18T15:00:24.944+08:00  INFO 24492 --- [wms-outbound-service] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-11-18T15:00:24.947+08:00  INFO 24492 --- [wms-outbound-service] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2584 ms
+2026-11-18T15:00:25.532+08:00  INFO 24492 --- [wms-outbound-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-11-18T15:00:26.120+08:00  INFO 24492 --- [wms-outbound-service] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5ed31735
+2026-11-18T15:00:26.126+08:00  INFO 24492 --- [wms-outbound-service] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-11-18T15:00:26.556+08:00  INFO 24492 --- [wms-outbound-service] [           main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.22.3 by Redgate
+2026-11-18T15:00:26.558+08:00  INFO 24492 --- [wms-outbound-service] [           main] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
+2026-11-18T15:00:26.559+08:00  INFO 24492 --- [wms-outbound-service] [           main] o.f.c.internal.license.VersionPrinter    : 
+2026-11-18T15:00:26.603+08:00  INFO 24492 --- [wms-outbound-service] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://127.0.0.1:3306/jim_wms_outbound (MySQL 8.0)
+2026-11-18T15:00:26.706+08:00  INFO 24492 --- [wms-outbound-service] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 3 migrations (execution time 00:00.054s)
+2026-11-18T15:00:26.731+08:00  INFO 24492 --- [wms-outbound-service] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema `jim_wms_outbound`: 3
+2026-11-18T15:00:26.740+08:00  INFO 24492 --- [wms-outbound-service] [           main] o.f.core.internal.command.DbMigrate      : Schema `jim_wms_outbound` is up to date. No migration necessary.
+2026-11-18T15:00:27.718+08:00  INFO 24492 --- [wms-outbound-service] [           main] o.s.c.openfeign.FeignClientFactoryBean   : For 'wms-inventory-service' URL not provided. Will try picking an instance via load-balancing.
+2026-11-18T15:00:27.934+08:00  INFO 24492 --- [wms-outbound-service] [           main] o.s.c.openfeign.FeignClientFactoryBean   : For 'wms-integration-service' URL not provided. Will try picking an instance via load-balancing.
+2026-11-18T15:00:27.972+08:00  INFO 24492 --- [wms-outbound-service] [           main] o.s.c.openfeign.FeignClientFactoryBean   : For 'wms-transfer-service' URL not provided. Will try picking an instance via load-balancing.
+2026-11-18T15:00:30.084+08:00  INFO 24492 --- [wms-outbound-service] [           main] com.jim.wms.common.lock.RedisLockUtil    : Redis 锁通道就绪（127.0.0.1:6379:0），PING=PONG
+2026-11-18T15:00:30.916+08:00  INFO 24492 --- [wms-outbound-service] [           main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2026-11-18T15:00:30.954+08:00  WARN 24492 --- [wms-outbound-service] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-11-18T15:00:30.996+08:00  INFO 24492 --- [wms-outbound-service] [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-11-18T15:00:31.105+08:00  INFO 24492 --- [wms-outbound-service] [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-11-18T15:00:31.115+08:00  INFO 24492 --- [wms-outbound-service] [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-18T15:00:31.155+08:00  INFO 24492 --- [wms-outbound-service] [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-11-18T15:00:31.156+08:00  INFO 24492 --- [wms-outbound-service] [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-11-18T15:00:31.157+08:00  INFO 24492 --- [wms-outbound-service] [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-11-18T15:00:31.157+08:00  INFO 24492 --- [wms-outbound-service] [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-11-18T15:00:31.157+08:00  INFO 24492 --- [wms-outbound-service] [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-11-18T15:00:31.158+08:00  INFO 24492 --- [wms-outbound-service] [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-11-18T15:00:31.158+08:00  INFO 24492 --- [wms-outbound-service] [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-11-18T15:00:31.669+08:00  INFO 24492 --- [wms-outbound-service] [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-11-18T15:00:31.674+08:00  INFO 24492 --- [wms-outbound-service] [           main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 10
+2026-11-18T15:00:31.677+08:00  INFO 24492 --- [wms-outbound-service] [           main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-11-18T15:00:31.682+08:00  INFO 24492 --- [wms-outbound-service] [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1794985231681 with initial instances count: 3
+2026-11-18T15:00:31.685+08:00  INFO 24492 --- [wms-outbound-service] [           main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application WMS-OUTBOUND-SERVICE with eureka with status UP
+2026-11-18T15:00:31.688+08:00  INFO 24492 --- [wms-outbound-service] [           main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1794985231688, current=UP, previous=STARTING]
+2026-11-18T15:00:31.692+08:00  INFO 24492 --- [wms-outbound-service] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WMS-OUTBOUND-SERVICE/wms-outbound-service:8084: registering service...
+2026-11-18T15:00:31.710+08:00  INFO 24492 --- [wms-outbound-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8084 (http) with context path ''
+2026-11-18T15:00:31.712+08:00  INFO 24492 --- [wms-outbound-service] [           main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8084
+2026-11-18T15:00:31.745+08:00  INFO 24492 --- [wms-outbound-service] [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WMS-OUTBOUND-SERVICE/wms-outbound-service:8084 - registration status: 204
+2026-11-18T15:00:31.803+08:00  INFO 24492 --- [wms-outbound-service] [           main] c.j.w.o.OutboundServiceApplication       : Started OutboundServiceApplication in 10.147 seconds (process running for 10.757)
+2026-11-18T15:01:01.843+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==>  Preparing: SELECT * FROM wms_outbound_stock_task WHERE (status IN ('PENDING','FAILED') AND retry_count < ? AND (next_retry_time IS NULL OR next_retry_time <= ?)) OR (status = 'PROCESSING' AND lease_until IS NOT NULL AND lease_until < ?) ORDER BY id ASC
+2026-11-18T15:01:01.860+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==> Parameters: 5(Integer), 2026-11-18T15:01:01.815979900(LocalDateTime), 2026-11-18T15:01:01.815979900(LocalDateTime)
+2026-11-18T15:01:01.880+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : <==      Total: 0
+2026-11-18T15:01:01.983+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,order_type,source_system,source_no,warehouse_code,target_warehouse_code,status,last_error,create_time,update_time FROM wms_outbound_order WHERE (status = ? AND update_time < ?)
+2026-11-18T15:01:01.985+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==> Parameters: CONFIRMING(String), 2026-11-18T14:59:01.882430300(LocalDateTime)
+2026-11-18T15:01:01.988+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : <==      Total: 0
+2026-11-18T15:01:31.884+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==>  Preparing: SELECT * FROM wms_outbound_stock_task WHERE (status IN ('PENDING','FAILED') AND retry_count < ? AND (next_retry_time IS NULL OR next_retry_time <= ?)) OR (status = 'PROCESSING' AND lease_until IS NOT NULL AND lease_until < ?) ORDER BY id ASC
+2026-11-18T15:01:31.886+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==> Parameters: 5(Integer), 2026-11-18T15:01:31.883237300(LocalDateTime), 2026-11-18T15:01:31.883237300(LocalDateTime)
+2026-11-18T15:01:31.889+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : <==      Total: 0
+2026-11-18T15:01:31.993+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,order_type,source_system,source_no,warehouse_code,target_warehouse_code,status,last_error,create_time,update_time FROM wms_outbound_order WHERE (status = ? AND update_time < ?)
+2026-11-18T15:01:31.996+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==> Parameters: CONFIRMING(String), 2026-11-18T14:59:31.992780200(LocalDateTime)
+2026-11-18T15:01:31.998+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : <==      Total: 0
+2026-11-18T15:02:01.897+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==>  Preparing: SELECT * FROM wms_outbound_stock_task WHERE (status IN ('PENDING','FAILED') AND retry_count < ? AND (next_retry_time IS NULL OR next_retry_time <= ?)) OR (status = 'PROCESSING' AND lease_until IS NOT NULL AND lease_until < ?) ORDER BY id ASC
+2026-11-18T15:02:01.899+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==> Parameters: 5(Integer), 2026-11-18T15:02:01.897830900(LocalDateTime), 2026-11-18T15:02:01.897830900(LocalDateTime)
+2026-11-18T15:02:01.900+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : <==      Total: 0
+2026-11-18T15:02:02.007+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,order_type,source_system,source_no,warehouse_code,target_warehouse_code,status,last_error,create_time,update_time FROM wms_outbound_order WHERE (status = ? AND update_time < ?)
+2026-11-18T15:02:02.009+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==> Parameters: CONFIRMING(String), 2026-11-18T15:00:02.006406100(LocalDateTime)
+2026-11-18T15:02:02.011+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : <==      Total: 0
+2026-11-18T15:02:31.905+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==>  Preparing: SELECT * FROM wms_outbound_stock_task WHERE (status IN ('PENDING','FAILED') AND retry_count < ? AND (next_retry_time IS NULL OR next_retry_time <= ?)) OR (status = 'PROCESSING' AND lease_until IS NOT NULL AND lease_until < ?) ORDER BY id ASC
+2026-11-18T15:02:31.907+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==> Parameters: 5(Integer), 2026-11-18T15:02:31.904061600(LocalDateTime), 2026-11-18T15:02:31.904061600(LocalDateTime)
+2026-11-18T15:02:31.908+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : <==      Total: 0
+2026-11-18T15:02:32.015+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,order_type,source_system,source_no,warehouse_code,target_warehouse_code,status,last_error,create_time,update_time FROM wms_outbound_order WHERE (status = ? AND update_time < ?)
+2026-11-18T15:02:32.018+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==> Parameters: CONFIRMING(String), 2026-11-18T15:00:32.014729(LocalDateTime)
+2026-11-18T15:02:32.019+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : <==      Total: 0
+2026-11-18T15:02:52.466+08:00  INFO 24492 --- [wms-outbound-service] [nio-8084-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-18T15:02:52.468+08:00  INFO 24492 --- [wms-outbound-service] [nio-8084-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-11-18T15:02:52.471+08:00  INFO 24492 --- [wms-outbound-service] [nio-8084-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-11-18T15:02:52.705+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-1] c.j.w.o.m.OutboundOrderMapper.insert     : ==>  Preparing: INSERT INTO wms_outbound_order ( outbound_no, order_type, source_system, source_no, warehouse_code, status, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ? )
+2026-11-18T15:02:52.708+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-1] c.j.w.o.m.OutboundOrderMapper.insert     : ==> Parameters: OUT1794985372695(String), SALE_OUT(String), OMS(String), REV-1(String), DC01(String), CREATED(String), 2026-11-18T15:02:52.626763800(LocalDateTime), 2026-11-18T15:02:52.626763800(LocalDateTime)
+2026-11-18T15:02:52.716+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-1] c.j.w.o.m.OutboundOrderMapper.insert     : <==    Updates: 1
+2026-11-18T15:02:52.723+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-1] c.j.w.o.m.O.insert                       : ==>  Preparing: INSERT INTO wms_outbound_item ( outbound_no, sku_code, batch_no, plan_qty, picked_qty, location_code ) VALUES ( ?, ?, ?, ?, ?, ? )
+2026-11-18T15:02:52.726+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-1] c.j.w.o.m.O.insert                       : ==> Parameters: OUT1794985372695(String), SKU-001(String), B-DEMO(String), 3.000(BigDecimal), 0(BigDecimal), DC01-A-01-01(String)
+2026-11-18T15:02:52.735+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-1] c.j.w.o.m.O.insert                       : <==    Updates: 1
+2026-11-18T15:02:52.736+08:00  INFO 24492 --- [wms-outbound-service] [nio-8084-exec-1] c.j.w.o.s.impl.OutboundServiceImpl       : 接收 OMS 单据 REV-1, 生成 WMS 出库单 OUT1794985372695
+2026-11-18T15:03:01.920+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==>  Preparing: SELECT * FROM wms_outbound_stock_task WHERE (status IN ('PENDING','FAILED') AND retry_count < ? AND (next_retry_time IS NULL OR next_retry_time <= ?)) OR (status = 'PROCESSING' AND lease_until IS NOT NULL AND lease_until < ?) ORDER BY id ASC
+2026-11-18T15:03:01.930+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==> Parameters: 5(Integer), 2026-11-18T15:03:01.919263800(LocalDateTime), 2026-11-18T15:03:01.919263800(LocalDateTime)
+2026-11-18T15:03:01.931+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : <==      Total: 0
+2026-11-18T15:03:02.028+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,order_type,source_system,source_no,warehouse_code,target_warehouse_code,status,last_error,create_time,update_time FROM wms_outbound_order WHERE (status = ? AND update_time < ?)
+2026-11-18T15:03:02.030+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==> Parameters: CONFIRMING(String), 2026-11-18T15:01:02.027810100(LocalDateTime)
+2026-11-18T15:03:02.032+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : <==      Total: 0
+2026-11-18T15:03:28.074+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-2] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,order_type,source_system,source_no,warehouse_code,target_warehouse_code,status,last_error,create_time,update_time FROM wms_outbound_order WHERE (outbound_no = ?)
+2026-11-18T15:03:28.076+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-2] c.j.w.o.m.O.selectList                   : ==> Parameters: OUT1794985372695(String)
+2026-11-18T15:03:28.081+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-2] c.j.w.o.m.O.selectList                   : <==      Total: 1
+2026-11-18T15:03:28.084+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-2] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,sku_code,batch_no,plan_qty,picked_qty,location_code FROM wms_outbound_item WHERE (outbound_no = ? AND sku_code = ? AND location_code = ? AND batch_no = ?)
+2026-11-18T15:03:28.085+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-2] c.j.w.o.m.O.selectList                   : ==> Parameters: OUT1794985372695(String), SKU-001(String), DC01-A-01-01(String), B-DEMO(String)
+2026-11-18T15:03:28.088+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-2] c.j.w.o.m.O.selectList                   : <==      Total: 1
+2026-11-18T15:03:28.091+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-2] c.j.w.o.m.O.updateById                   : ==>  Preparing: UPDATE wms_outbound_item SET outbound_no=?, sku_code=?, batch_no=?, plan_qty=?, picked_qty=?, location_code=? WHERE id=?
+2026-11-18T15:03:28.091+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-2] c.j.w.o.m.O.updateById                   : ==> Parameters: OUT1794985372695(String), SKU-001(String), B-DEMO(String), 3.000(BigDecimal), 3.000(BigDecimal), DC01-A-01-01(String), 59(Long)
+2026-11-18T15:03:28.093+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-2] c.j.w.o.m.O.updateById                   : <==    Updates: 1
+2026-11-18T15:03:28.096+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-2] c.j.w.o.m.O.updateById                   : ==>  Preparing: UPDATE wms_outbound_order SET outbound_no=?, order_type=?, source_system=?, source_no=?, warehouse_code=?, status=?, create_time=?, update_time=? WHERE id=?
+2026-11-18T15:03:28.096+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-2] c.j.w.o.m.O.updateById                   : ==> Parameters: OUT1794985372695(String), SALE_OUT(String), OMS(String), REV-1(String), DC01(String), PICKING(String), 2026-11-18T15:02:53(LocalDateTime), 2026-11-18T15:03:28.093332400(LocalDateTime), 56(Long)
+2026-11-18T15:03:28.098+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-2] c.j.w.o.m.O.updateById                   : <==    Updates: 1
+2026-11-18T15:03:28.148+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-3] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,order_type,source_system,source_no,warehouse_code,target_warehouse_code,status,last_error,create_time,update_time FROM wms_outbound_order WHERE (outbound_no = ?)
+2026-11-18T15:03:28.150+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-3] c.j.w.o.m.O.selectList                   : ==> Parameters: OUT1794985372695(String)
+2026-11-18T15:03:28.154+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-3] c.j.w.o.m.O.selectList                   : <==      Total: 1
+2026-11-18T15:03:28.157+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-3] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,sku_code,batch_no,plan_qty,picked_qty,location_code FROM wms_outbound_item WHERE (outbound_no = ?)
+2026-11-18T15:03:28.158+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-3] c.j.w.o.m.O.selectList                   : ==> Parameters: OUT1794985372695(String)
+2026-11-18T15:03:28.160+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-3] c.j.w.o.m.O.selectList                   : <==      Total: 1
+2026-11-18T15:03:28.162+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-3] c.j.w.o.m.O.updateById                   : ==>  Preparing: UPDATE wms_outbound_order SET outbound_no=?, order_type=?, source_system=?, source_no=?, warehouse_code=?, status=?, create_time=?, update_time=? WHERE id=?
+2026-11-18T15:03:28.163+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-3] c.j.w.o.m.O.updateById                   : ==> Parameters: OUT1794985372695(String), SALE_OUT(String), OMS(String), REV-1(String), DC01(String), CONFIRMING(String), 2026-11-18T15:02:53(LocalDateTime), 2026-11-18T15:03:28.161161400(LocalDateTime), 56(Long)
+2026-11-18T15:03:28.164+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-3] c.j.w.o.m.O.updateById                   : <==    Updates: 1
+2026-11-18T15:03:28.166+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-3] c.j.w.o.m.O.selectCount                  : ==>  Preparing: SELECT COUNT( * ) AS total FROM wms_outbound_stock_task WHERE (request_id = ?)
+2026-11-18T15:03:28.166+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-3] c.j.w.o.m.O.selectCount                  : ==> Parameters: OUT:OUT1794985372695:SKU-001:DC01-A-01-01:B-DEMO(String)
+2026-11-18T15:03:28.167+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-3] c.j.w.o.m.O.selectCount                  : <==      Total: 1
+2026-11-18T15:03:28.170+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-3] c.j.w.o.m.O.insert                       : ==>  Preparing: INSERT INTO wms_outbound_stock_task ( outbound_no, sku_code, location_code, batch_no, change_qty, request_id, status, retry_count, next_retry_time, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+2026-11-18T15:03:28.173+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-3] c.j.w.o.m.O.insert                       : ==> Parameters: OUT1794985372695(String), SKU-001(String), DC01-A-01-01(String), B-DEMO(String), -3.000(BigDecimal), OUT:OUT1794985372695:SKU-001:DC01-A-01-01:B-DEMO(String), PENDING(String), 0(Integer), 2026-11-18T15:03:38.161161400(LocalDateTime), 2026-11-18T15:03:28.161161400(LocalDateTime), 2026-11-18T15:03:28.161161400(LocalDateTime)
+2026-11-18T15:03:28.175+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-3] c.j.w.o.m.O.insert                       : <==    Updates: 1
+2026-11-18T15:03:28.185+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-3] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,sku_code,location_code,batch_no,change_qty,request_id,status,last_error,retry_count,next_retry_time,owner,lease_until,create_time,update_time FROM wms_outbound_stock_task WHERE (outbound_no = ?)
+2026-11-18T15:03:28.187+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-3] c.j.w.o.m.O.selectList                   : ==> Parameters: OUT1794985372695(String)
+2026-11-18T15:03:28.191+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-3] c.j.w.o.m.O.selectList                   : <==      Total: 1
+2026-11-18T15:03:28.192+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-3] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,order_type,source_system,source_no,warehouse_code,target_warehouse_code,status,last_error,create_time,update_time FROM wms_outbound_order WHERE (outbound_no = ?)
+2026-11-18T15:03:28.195+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-3] c.j.w.o.m.O.selectList                   : ==> Parameters: OUT1794985372695(String)
+2026-11-18T15:03:28.196+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-3] c.j.w.o.m.O.selectList                   : <==      Total: 1
+2026-11-18T15:03:28.198+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-3] c.j.w.o.m.O.claimFirstAttempt            : ==>  Preparing: UPDATE wms_outbound_stock_task SET status='PROCESSING', owner=?, lease_until=?, retry_count = retry_count + 1, update_time=? WHERE id=? AND status='PENDING' AND retry_count=0
+2026-11-18T15:03:28.198+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-3] c.j.w.o.m.O.claimFirstAttempt            : ==> Parameters: wms-outbound-service:8084:http-nio-8084-exec-3(String), 2026-11-18T15:04:28.197163700(LocalDateTime), 2026-11-18T15:03:28.197163700(LocalDateTime), 46(Long)
+2026-11-18T15:03:28.200+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-3] c.j.w.o.m.O.claimFirstAttempt            : <==    Updates: 1
+2026-11-18T15:03:28.208+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-3] c.j.w.o.m.O.selectById                   : ==>  Preparing: SELECT id,outbound_no,sku_code,location_code,batch_no,change_qty,request_id,status,last_error,retry_count,next_retry_time,owner,lease_until,create_time,update_time FROM wms_outbound_stock_task WHERE id=?
+2026-11-18T15:03:28.211+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-3] c.j.w.o.m.O.selectById                   : ==> Parameters: 46(Long)
+2026-11-18T15:03:28.212+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-3] c.j.w.o.m.O.selectById                   : <==      Total: 1
+2026-11-18T15:03:28.213+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-3] c.j.w.o.m.O.renewLease                   : ==>  Preparing: UPDATE wms_outbound_stock_task SET lease_until=?, update_time=? WHERE id=? AND owner=?
+2026-11-18T15:03:28.214+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-3] c.j.w.o.m.O.renewLease                   : ==> Parameters: 2026-11-18T15:04:28.212175800(LocalDateTime), 2026-11-18T15:03:28.212175800(LocalDateTime), 46(Long), wms-outbound-service:8084:http-nio-8084-exec-3(String)
+2026-11-18T15:03:28.214+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-3] c.j.w.o.m.O.renewLease                   : <==    Updates: 1
+2026-11-18T15:03:28.402+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-3] c.j.w.o.m.O.markSuccessTerminal          : ==>  Preparing: UPDATE wms_outbound_stock_task SET status='SUCCESS', owner=NULL, lease_until=NULL, last_error=NULL, next_retry_time=NULL, update_time=? WHERE id=?
+2026-11-18T15:03:28.403+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-3] c.j.w.o.m.O.markSuccessTerminal          : ==> Parameters: 2026-11-18T15:03:28.401546400(LocalDateTime), 46(Long)
+2026-11-18T15:03:28.412+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-3] c.j.w.o.m.O.markSuccessTerminal          : <==    Updates: 1
+2026-11-18T15:03:28.416+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-3] c.j.w.o.m.O.renewLease                   : ==>  Preparing: UPDATE wms_outbound_stock_task SET lease_until=?, update_time=? WHERE id=? AND owner=?
+2026-11-18T15:03:28.416+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-3] c.j.w.o.m.O.renewLease                   : ==> Parameters: 2026-11-18T15:04:28.415059700(LocalDateTime), 2026-11-18T15:03:28.415059700(LocalDateTime), 46(Long), wms-outbound-service:8084:http-nio-8084-exec-3(String)
+2026-11-18T15:03:28.417+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-3] c.j.w.o.m.O.renewLease                   : <==    Updates: 0
+2026-11-18T15:03:28.418+08:00  WARN 24492 --- [wms-outbound-service] [nio-8084-exec-3] c.j.w.o.s.impl.OutboundServiceImpl       : 续租未命中（已被回收或 owner 不符）, taskId=46, requestId=OUT:OUT1794985372695:SKU-001:DC01-A-01-01:B-DEMO
+2026-11-18T15:03:28.420+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-3] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,order_type,source_system,source_no,warehouse_code,target_warehouse_code,status,last_error,create_time,update_time FROM wms_outbound_order WHERE (outbound_no = ?)
+2026-11-18T15:03:28.420+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-3] c.j.w.o.m.O.selectList                   : ==> Parameters: OUT1794985372695(String)
+2026-11-18T15:03:28.422+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-3] c.j.w.o.m.O.selectList                   : <==      Total: 1
+2026-11-18T15:03:28.424+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-3] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,sku_code,location_code,batch_no,change_qty,request_id,status,last_error,retry_count,next_retry_time,owner,lease_until,create_time,update_time FROM wms_outbound_stock_task WHERE (outbound_no = ?)
+2026-11-18T15:03:28.425+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-3] c.j.w.o.m.O.selectList                   : ==> Parameters: OUT1794985372695(String)
+2026-11-18T15:03:28.427+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-3] c.j.w.o.m.O.selectList                   : <==      Total: 1
+2026-11-18T15:03:28.430+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-3] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,sku_code,batch_no,plan_qty,picked_qty,location_code FROM wms_outbound_item WHERE (outbound_no = ?)
+2026-11-18T15:03:28.430+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-3] c.j.w.o.m.O.selectList                   : ==> Parameters: OUT1794985372695(String)
+2026-11-18T15:03:28.431+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-3] c.j.w.o.m.O.selectList                   : <==      Total: 1
+2026-11-18T15:03:28.434+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-3] c.j.w.o.m.O.updateById                   : ==>  Preparing: UPDATE wms_outbound_order SET outbound_no=?, order_type=?, source_system=?, source_no=?, warehouse_code=?, status=?, create_time=?, update_time=? WHERE id=?
+2026-11-18T15:03:28.435+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-3] c.j.w.o.m.O.updateById                   : ==> Parameters: OUT1794985372695(String), SALE_OUT(String), OMS(String), REV-1(String), DC01(String), FINISHED(String), 2026-11-18T15:02:53(LocalDateTime), 2026-11-18T15:03:28.433239(LocalDateTime), 56(Long)
+2026-11-18T15:03:28.436+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-3] c.j.w.o.m.O.updateById                   : <==    Updates: 1
+2026-11-18T15:03:28.440+08:00  INFO 24492 --- [wms-outbound-service] [nio-8084-exec-3] com.jim.wms.common.outbox.OutboxWriter   : 发件箱已登记 topic=wms-order-status, eventKey=OUT1794985372695
+2026-11-18T15:03:28.488+08:00  INFO 24492 --- [wms-outbound-service] [nio-8084-exec-3] c.j.w.o.s.impl.OutboundServiceImpl       : 出库单终态确认, outboundNo=OUT1794985372695, status=FINISHED
+2026-11-18T15:03:28.493+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-3] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,sku_code,location_code,batch_no,change_qty,request_id,status,last_error,retry_count,next_retry_time,owner,lease_until,create_time,update_time FROM wms_outbound_stock_task WHERE (outbound_no = ?)
+2026-11-18T15:03:28.494+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-3] c.j.w.o.m.O.selectList                   : ==> Parameters: OUT1794985372695(String)
+2026-11-18T15:03:28.496+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-3] c.j.w.o.m.O.selectList                   : <==      Total: 1
+2026-11-18T15:03:28.498+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-3] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,order_type,source_system,source_no,warehouse_code,target_warehouse_code,status,last_error,create_time,update_time FROM wms_outbound_order WHERE (outbound_no = ?)
+2026-11-18T15:03:28.499+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-3] c.j.w.o.m.O.selectList                   : ==> Parameters: OUT1794985372695(String)
+2026-11-18T15:03:28.500+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-3] c.j.w.o.m.O.selectList                   : <==      Total: 1
+2026-11-18T15:03:28.997+08:00  INFO 24492 --- [wms-outbound-service] [   scheduling-1] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [127.0.0.1:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 1000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 3
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2026-11-18T15:03:29.027+08:00  INFO 24492 --- [wms-outbound-service] [   scheduling-1] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Instantiated an idempotent producer.
+2026-11-18T15:03:29.077+08:00  INFO 24492 --- [wms-outbound-service] [   scheduling-1] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.6.2
+2026-11-18T15:03:29.077+08:00  INFO 24492 --- [wms-outbound-service] [   scheduling-1] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: c4deed513057c94e
+2026-11-18T15:03:29.077+08:00  INFO 24492 --- [wms-outbound-service] [   scheduling-1] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1794985409075
+2026-11-18T15:03:29.359+08:00  INFO 24492 --- [wms-outbound-service] [ad | producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Cluster ID: It0Yw3kSTE6CgjNgvc67hg
+2026-11-18T15:03:29.362+08:00  INFO 24492 --- [wms-outbound-service] [ad | producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-1] ProducerId set to 1022 with epoch 0
+2026-11-18T15:03:29.417+08:00  INFO 24492 --- [wms-outbound-service] [   scheduling-1] com.jim.wms.common.outbox.OutboxRelay    : 发件箱投递成功 id=33, topic=wms-order-status, eventKey=OUT1794985372695
+2026-11-18T15:03:29.418+08:00  INFO 24492 --- [wms-outbound-service] [   scheduling-1] com.jim.wms.common.outbox.OutboxRelay    : 发件箱本轮投递处理 1 条，owner=wms-outbound-service:8084
+2026-11-18T15:03:31.935+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==>  Preparing: SELECT * FROM wms_outbound_stock_task WHERE (status IN ('PENDING','FAILED') AND retry_count < ? AND (next_retry_time IS NULL OR next_retry_time <= ?)) OR (status = 'PROCESSING' AND lease_until IS NOT NULL AND lease_until < ?) ORDER BY id ASC
+2026-11-18T15:03:31.938+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==> Parameters: 5(Integer), 2026-11-18T15:03:31.935001800(LocalDateTime), 2026-11-18T15:03:31.935001800(LocalDateTime)
+2026-11-18T15:03:31.940+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : <==      Total: 0
+2026-11-18T15:03:32.044+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,order_type,source_system,source_no,warehouse_code,target_warehouse_code,status,last_error,create_time,update_time FROM wms_outbound_order WHERE (status = ? AND update_time < ?)
+2026-11-18T15:03:32.045+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==> Parameters: CONFIRMING(String), 2026-11-18T15:01:32.043462700(LocalDateTime)
+2026-11-18T15:03:32.047+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : <==      Total: 0
+2026-11-18T15:04:01.950+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==>  Preparing: SELECT * FROM wms_outbound_stock_task WHERE (status IN ('PENDING','FAILED') AND retry_count < ? AND (next_retry_time IS NULL OR next_retry_time <= ?)) OR (status = 'PROCESSING' AND lease_until IS NOT NULL AND lease_until < ?) ORDER BY id ASC
+2026-11-18T15:04:01.953+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==> Parameters: 5(Integer), 2026-11-18T15:04:01.950897(LocalDateTime), 2026-11-18T15:04:01.950897(LocalDateTime)
+2026-11-18T15:04:01.955+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : <==      Total: 0
+2026-11-18T15:04:02.059+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,order_type,source_system,source_no,warehouse_code,target_warehouse_code,status,last_error,create_time,update_time FROM wms_outbound_order WHERE (status = ? AND update_time < ?)
+2026-11-18T15:04:02.059+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==> Parameters: CONFIRMING(String), 2026-11-18T15:02:02.058400400(LocalDateTime)
+2026-11-18T15:04:02.062+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : <==      Total: 0
+2026-11-18T15:04:31.960+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==>  Preparing: SELECT * FROM wms_outbound_stock_task WHERE (status IN ('PENDING','FAILED') AND retry_count < ? AND (next_retry_time IS NULL OR next_retry_time <= ?)) OR (status = 'PROCESSING' AND lease_until IS NOT NULL AND lease_until < ?) ORDER BY id ASC
+2026-11-18T15:04:31.962+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==> Parameters: 5(Integer), 2026-11-18T15:04:31.959448300(LocalDateTime), 2026-11-18T15:04:31.959448300(LocalDateTime)
+2026-11-18T15:04:31.963+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : <==      Total: 0
+2026-11-18T15:04:32.070+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,order_type,source_system,source_no,warehouse_code,target_warehouse_code,status,last_error,create_time,update_time FROM wms_outbound_order WHERE (status = ? AND update_time < ?)
+2026-11-18T15:04:32.073+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==> Parameters: CONFIRMING(String), 2026-11-18T15:02:32.069762400(LocalDateTime)
+2026-11-18T15:04:32.074+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : <==      Total: 0
+2026-11-18T15:05:01.979+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==>  Preparing: SELECT * FROM wms_outbound_stock_task WHERE (status IN ('PENDING','FAILED') AND retry_count < ? AND (next_retry_time IS NULL OR next_retry_time <= ?)) OR (status = 'PROCESSING' AND lease_until IS NOT NULL AND lease_until < ?) ORDER BY id ASC
+2026-11-18T15:05:01.982+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==> Parameters: 5(Integer), 2026-11-18T15:05:01.979325600(LocalDateTime), 2026-11-18T15:05:01.979325600(LocalDateTime)
+2026-11-18T15:05:01.983+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : <==      Total: 0
+2026-11-18T15:05:02.090+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,order_type,source_system,source_no,warehouse_code,target_warehouse_code,status,last_error,create_time,update_time FROM wms_outbound_order WHERE (status = ? AND update_time < ?)
+2026-11-18T15:05:02.092+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==> Parameters: CONFIRMING(String), 2026-11-18T15:03:02.089118900(LocalDateTime)
+2026-11-18T15:05:02.094+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : <==      Total: 0
+2026-11-18T15:05:31.176+08:00  INFO 24492 --- [wms-outbound-service] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-18T15:05:31.985+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==>  Preparing: SELECT * FROM wms_outbound_stock_task WHERE (status IN ('PENDING','FAILED') AND retry_count < ? AND (next_retry_time IS NULL OR next_retry_time <= ?)) OR (status = 'PROCESSING' AND lease_until IS NOT NULL AND lease_until < ?) ORDER BY id ASC
+2026-11-18T15:05:31.988+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==> Parameters: 5(Integer), 2026-11-18T15:05:31.985873500(LocalDateTime), 2026-11-18T15:05:31.985873500(LocalDateTime)
+2026-11-18T15:05:31.990+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : <==      Total: 0
+2026-11-18T15:05:32.097+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,order_type,source_system,source_no,warehouse_code,target_warehouse_code,status,last_error,create_time,update_time FROM wms_outbound_order WHERE (status = ? AND update_time < ?)
+2026-11-18T15:05:32.098+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==> Parameters: CONFIRMING(String), 2026-11-18T15:03:32.096123900(LocalDateTime)
+2026-11-18T15:05:32.100+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : <==      Total: 0
+2026-11-18T15:06:02.007+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==>  Preparing: SELECT * FROM wms_outbound_stock_task WHERE (status IN ('PENDING','FAILED') AND retry_count < ? AND (next_retry_time IS NULL OR next_retry_time <= ?)) OR (status = 'PROCESSING' AND lease_until IS NOT NULL AND lease_until < ?) ORDER BY id ASC
+2026-11-18T15:06:02.010+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==> Parameters: 5(Integer), 2026-11-18T15:06:02.007498300(LocalDateTime), 2026-11-18T15:06:02.007498300(LocalDateTime)
+2026-11-18T15:06:02.011+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : <==      Total: 0
+2026-11-18T15:06:02.103+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,order_type,source_system,source_no,warehouse_code,target_warehouse_code,status,last_error,create_time,update_time FROM wms_outbound_order WHERE (status = ? AND update_time < ?)
+2026-11-18T15:06:02.105+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==> Parameters: CONFIRMING(String), 2026-11-18T15:04:02.102005100(LocalDateTime)
+2026-11-18T15:06:02.107+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : <==      Total: 0
+2026-11-18T15:06:32.016+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==>  Preparing: SELECT * FROM wms_outbound_stock_task WHERE (status IN ('PENDING','FAILED') AND retry_count < ? AND (next_retry_time IS NULL OR next_retry_time <= ?)) OR (status = 'PROCESSING' AND lease_until IS NOT NULL AND lease_until < ?) ORDER BY id ASC
+2026-11-18T15:06:32.019+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==> Parameters: 5(Integer), 2026-11-18T15:06:32.016176200(LocalDateTime), 2026-11-18T15:06:32.016176200(LocalDateTime)
+2026-11-18T15:06:32.022+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : <==      Total: 0
+2026-11-18T15:06:32.110+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,order_type,source_system,source_no,warehouse_code,target_warehouse_code,status,last_error,create_time,update_time FROM wms_outbound_order WHERE (status = ? AND update_time < ?)
+2026-11-18T15:06:32.112+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==> Parameters: CONFIRMING(String), 2026-11-18T15:04:32.109124900(LocalDateTime)
+2026-11-18T15:06:32.113+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : <==      Total: 0
+2026-11-18T15:07:02.027+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==>  Preparing: SELECT * FROM wms_outbound_stock_task WHERE (status IN ('PENDING','FAILED') AND retry_count < ? AND (next_retry_time IS NULL OR next_retry_time <= ?)) OR (status = 'PROCESSING' AND lease_until IS NOT NULL AND lease_until < ?) ORDER BY id ASC
+2026-11-18T15:07:02.030+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==> Parameters: 5(Integer), 2026-11-18T15:07:02.027785800(LocalDateTime), 2026-11-18T15:07:02.027785800(LocalDateTime)
+2026-11-18T15:07:02.031+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : <==      Total: 0
+2026-11-18T15:07:02.123+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,order_type,source_system,source_no,warehouse_code,target_warehouse_code,status,last_error,create_time,update_time FROM wms_outbound_order WHERE (status = ? AND update_time < ?)
+2026-11-18T15:07:02.126+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==> Parameters: CONFIRMING(String), 2026-11-18T15:05:02.121569200(LocalDateTime)
+2026-11-18T15:07:02.128+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : <==      Total: 0
+2026-11-18T15:07:32.042+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==>  Preparing: SELECT * FROM wms_outbound_stock_task WHERE (status IN ('PENDING','FAILED') AND retry_count < ? AND (next_retry_time IS NULL OR next_retry_time <= ?)) OR (status = 'PROCESSING' AND lease_until IS NOT NULL AND lease_until < ?) ORDER BY id ASC
+2026-11-18T15:07:32.043+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==> Parameters: 5(Integer), 2026-11-18T15:07:32.042324200(LocalDateTime), 2026-11-18T15:07:32.042324200(LocalDateTime)
+2026-11-18T15:07:32.044+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : <==      Total: 0
+2026-11-18T15:07:32.137+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,order_type,source_system,source_no,warehouse_code,target_warehouse_code,status,last_error,create_time,update_time FROM wms_outbound_order WHERE (status = ? AND update_time < ?)
+2026-11-18T15:07:32.140+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==> Parameters: CONFIRMING(String), 2026-11-18T15:05:32.136983200(LocalDateTime)
+2026-11-18T15:07:32.141+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : <==      Total: 0
+2026-11-18T15:07:55.867+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-6] c.j.w.o.m.OutboundOrderMapper.insert     : ==>  Preparing: INSERT INTO wms_outbound_order ( outbound_no, order_type, source_system, source_no, warehouse_code, status, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ? )
+2026-11-18T15:07:55.868+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-6] c.j.w.o.m.OutboundOrderMapper.insert     : ==> Parameters: OUT1794985675866(String), SALE_OUT(String), OMS(String), REV-2(String), DC01(String), CREATED(String), 2026-11-18T15:07:55.866606700(LocalDateTime), 2026-11-18T15:07:55.866606700(LocalDateTime)
+2026-11-18T15:07:55.877+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-6] c.j.w.o.m.OutboundOrderMapper.insert     : <==    Updates: 1
+2026-11-18T15:07:55.879+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-6] c.j.w.o.m.O.insert                       : ==>  Preparing: INSERT INTO wms_outbound_item ( outbound_no, sku_code, batch_no, plan_qty, picked_qty, location_code ) VALUES ( ?, ?, ?, ?, ?, ? )
+2026-11-18T15:07:55.880+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-6] c.j.w.o.m.O.insert                       : ==> Parameters: OUT1794985675866(String), SKU-001(String), B-DEMO(String), 2.000(BigDecimal), 0(BigDecimal), DC01-A-01-01(String)
+2026-11-18T15:07:55.886+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-6] c.j.w.o.m.O.insert                       : <==    Updates: 1
+2026-11-18T15:07:55.888+08:00  INFO 24492 --- [wms-outbound-service] [nio-8084-exec-6] c.j.w.o.s.impl.OutboundServiceImpl       : 接收 OMS 单据 REV-2, 生成 WMS 出库单 OUT1794985675866
+2026-11-18T15:08:02.060+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==>  Preparing: SELECT * FROM wms_outbound_stock_task WHERE (status IN ('PENDING','FAILED') AND retry_count < ? AND (next_retry_time IS NULL OR next_retry_time <= ?)) OR (status = 'PROCESSING' AND lease_until IS NOT NULL AND lease_until < ?) ORDER BY id ASC
+2026-11-18T15:08:02.062+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==> Parameters: 5(Integer), 2026-11-18T15:08:02.060873700(LocalDateTime), 2026-11-18T15:08:02.060873700(LocalDateTime)
+2026-11-18T15:08:02.065+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : <==      Total: 0
+2026-11-18T15:08:02.155+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,order_type,source_system,source_no,warehouse_code,target_warehouse_code,status,last_error,create_time,update_time FROM wms_outbound_order WHERE (status = ? AND update_time < ?)
+2026-11-18T15:08:02.157+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==> Parameters: CONFIRMING(String), 2026-11-18T15:06:02.154799900(LocalDateTime)
+2026-11-18T15:08:02.158+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : <==      Total: 0
+2026-11-18T15:08:05.863+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-7] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,order_type,source_system,source_no,warehouse_code,target_warehouse_code,status,last_error,create_time,update_time FROM wms_outbound_order WHERE (outbound_no = ?)
+2026-11-18T15:08:05.864+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-7] c.j.w.o.m.O.selectList                   : ==> Parameters: OUT1794985675866(String)
+2026-11-18T15:08:05.865+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-7] c.j.w.o.m.O.selectList                   : <==      Total: 1
+2026-11-18T15:08:05.867+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-7] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,sku_code,batch_no,plan_qty,picked_qty,location_code FROM wms_outbound_item WHERE (outbound_no = ?)
+2026-11-18T15:08:05.867+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-7] c.j.w.o.m.O.selectList                   : ==> Parameters: OUT1794985675866(String)
+2026-11-18T15:08:05.868+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-7] c.j.w.o.m.O.selectList                   : <==      Total: 1
+2026-11-18T15:08:05.872+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-7] c.j.w.o.m.O.updateById                   : ==>  Preparing: UPDATE wms_outbound_order SET outbound_no=?, order_type=?, source_system=?, source_no=?, warehouse_code=?, status=?, create_time=?, update_time=? WHERE id=?
+2026-11-18T15:08:05.873+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-7] c.j.w.o.m.O.updateById                   : ==> Parameters: OUT1794985675866(String), SALE_OUT(String), OMS(String), REV-2(String), DC01(String), CANCELLED(String), 2026-11-18T15:07:56(LocalDateTime), 2026-11-18T15:08:05.871806300(LocalDateTime), 57(Long)
+2026-11-18T15:08:05.874+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-7] c.j.w.o.m.O.updateById                   : <==    Updates: 1
+2026-11-18T15:08:05.875+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-7] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,sku_code,location_code,batch_no,change_qty,request_id,status,last_error,retry_count,next_retry_time,owner,lease_until,create_time,update_time FROM wms_outbound_stock_task WHERE (outbound_no = ?)
+2026-11-18T15:08:05.877+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-7] c.j.w.o.m.O.selectList                   : ==> Parameters: OUT1794985675866(String)
+2026-11-18T15:08:05.879+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-7] c.j.w.o.m.O.selectList                   : <==      Total: 0
+2026-11-18T15:08:05.880+08:00  INFO 24492 --- [wms-outbound-service] [nio-8084-exec-7] com.jim.wms.common.outbox.OutboxWriter   : 发件箱已登记 topic=wms-order-status, eventKey=OUT1794985675866
+2026-11-18T15:08:06.836+08:00  INFO 24492 --- [wms-outbound-service] [   scheduling-1] com.jim.wms.common.outbox.OutboxRelay    : 发件箱投递成功 id=34, topic=wms-order-status, eventKey=OUT1794985675866
+2026-11-18T15:08:06.839+08:00  INFO 24492 --- [wms-outbound-service] [   scheduling-1] com.jim.wms.common.outbox.OutboxRelay    : 发件箱本轮投递处理 1 条，owner=wms-outbound-service:8084
+2026-11-18T15:08:31.423+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-8] c.j.w.o.m.OutboundOrderMapper.insert     : ==>  Preparing: INSERT INTO wms_outbound_order ( outbound_no, order_type, source_system, source_no, warehouse_code, status, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ? )
+2026-11-18T15:08:31.424+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-8] c.j.w.o.m.OutboundOrderMapper.insert     : ==> Parameters: OUT1794985711422(String), SALE_OUT(String), OMS(String), REV-3(String), DC01(String), CREATED(String), 2026-11-18T15:08:31.422481200(LocalDateTime), 2026-11-18T15:08:31.422481200(LocalDateTime)
+2026-11-18T15:08:31.433+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-8] c.j.w.o.m.OutboundOrderMapper.insert     : <==    Updates: 1
+2026-11-18T15:08:31.434+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-8] c.j.w.o.m.O.insert                       : ==>  Preparing: INSERT INTO wms_outbound_item ( outbound_no, sku_code, batch_no, plan_qty, picked_qty, location_code ) VALUES ( ?, ?, ?, ?, ?, ? )
+2026-11-18T15:08:31.436+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-8] c.j.w.o.m.O.insert                       : ==> Parameters: OUT1794985711422(String), SKU-001(String), B-DEMO(String), 2.000(BigDecimal), 0(BigDecimal), DC01-A-01-01(String)
+2026-11-18T15:08:31.446+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-8] c.j.w.o.m.O.insert                       : <==    Updates: 1
+2026-11-18T15:08:31.446+08:00  INFO 24492 --- [wms-outbound-service] [nio-8084-exec-8] c.j.w.o.s.impl.OutboundServiceImpl       : 接收 OMS 单据 REV-3, 生成 WMS 出库单 OUT1794985711422
+2026-11-18T15:08:32.076+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==>  Preparing: SELECT * FROM wms_outbound_stock_task WHERE (status IN ('PENDING','FAILED') AND retry_count < ? AND (next_retry_time IS NULL OR next_retry_time <= ?)) OR (status = 'PROCESSING' AND lease_until IS NOT NULL AND lease_until < ?) ORDER BY id ASC
+2026-11-18T15:08:32.078+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==> Parameters: 5(Integer), 2026-11-18T15:08:32.075133900(LocalDateTime), 2026-11-18T15:08:32.075133900(LocalDateTime)
+2026-11-18T15:08:32.080+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : <==      Total: 0
+2026-11-18T15:08:32.171+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,order_type,source_system,source_no,warehouse_code,target_warehouse_code,status,last_error,create_time,update_time FROM wms_outbound_order WHERE (status = ? AND update_time < ?)
+2026-11-18T15:08:32.173+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==> Parameters: CONFIRMING(String), 2026-11-18T15:06:32.170525200(LocalDateTime)
+2026-11-18T15:08:32.177+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : <==      Total: 0
+2026-11-18T15:08:33.557+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-9] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,order_type,source_system,source_no,warehouse_code,target_warehouse_code,status,last_error,create_time,update_time FROM wms_outbound_order WHERE (outbound_no = ?)
+2026-11-18T15:08:33.559+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-9] c.j.w.o.m.O.selectList                   : ==> Parameters: OUT1794985711422(String)
+2026-11-18T15:08:33.562+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-9] c.j.w.o.m.O.selectList                   : <==      Total: 1
+2026-11-18T15:08:33.563+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-9] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,sku_code,batch_no,plan_qty,picked_qty,location_code FROM wms_outbound_item WHERE (outbound_no = ? AND sku_code = ? AND location_code = ? AND batch_no = ?)
+2026-11-18T15:08:33.564+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-9] c.j.w.o.m.O.selectList                   : ==> Parameters: OUT1794985711422(String), SKU-001(String), DC01-A-01-01(String), B-DEMO(String)
+2026-11-18T15:08:33.565+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-9] c.j.w.o.m.O.selectList                   : <==      Total: 1
+2026-11-18T15:08:33.566+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-9] c.j.w.o.m.O.updateById                   : ==>  Preparing: UPDATE wms_outbound_item SET outbound_no=?, sku_code=?, batch_no=?, plan_qty=?, picked_qty=?, location_code=? WHERE id=?
+2026-11-18T15:08:33.566+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-9] c.j.w.o.m.O.updateById                   : ==> Parameters: OUT1794985711422(String), SKU-001(String), B-DEMO(String), 2.000(BigDecimal), 1.000(BigDecimal), DC01-A-01-01(String), 61(Long)
+2026-11-18T15:08:33.567+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-9] c.j.w.o.m.O.updateById                   : <==    Updates: 1
+2026-11-18T15:08:33.568+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-9] c.j.w.o.m.O.updateById                   : ==>  Preparing: UPDATE wms_outbound_order SET outbound_no=?, order_type=?, source_system=?, source_no=?, warehouse_code=?, status=?, create_time=?, update_time=? WHERE id=?
+2026-11-18T15:08:33.568+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-9] c.j.w.o.m.O.updateById                   : ==> Parameters: OUT1794985711422(String), SALE_OUT(String), OMS(String), REV-3(String), DC01(String), PICKING(String), 2026-11-18T15:08:31(LocalDateTime), 2026-11-18T15:08:33.567498(LocalDateTime), 58(Long)
+2026-11-18T15:08:33.569+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-9] c.j.w.o.m.O.updateById                   : <==    Updates: 1
+2026-11-18T15:08:33.584+08:00 DEBUG 24492 --- [wms-outbound-service] [io-8084-exec-10] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,order_type,source_system,source_no,warehouse_code,target_warehouse_code,status,last_error,create_time,update_time FROM wms_outbound_order WHERE (outbound_no = ?)
+2026-11-18T15:08:33.585+08:00 DEBUG 24492 --- [wms-outbound-service] [io-8084-exec-10] c.j.w.o.m.O.selectList                   : ==> Parameters: OUT1794985711422(String)
+2026-11-18T15:08:33.586+08:00 DEBUG 24492 --- [wms-outbound-service] [io-8084-exec-10] c.j.w.o.m.O.selectList                   : <==      Total: 1
+2026-11-18T15:08:33.587+08:00 DEBUG 24492 --- [wms-outbound-service] [io-8084-exec-10] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,sku_code,batch_no,plan_qty,picked_qty,location_code FROM wms_outbound_item WHERE (outbound_no = ?)
+2026-11-18T15:08:33.588+08:00 DEBUG 24492 --- [wms-outbound-service] [io-8084-exec-10] c.j.w.o.m.O.selectList                   : ==> Parameters: OUT1794985711422(String)
+2026-11-18T15:08:33.589+08:00 DEBUG 24492 --- [wms-outbound-service] [io-8084-exec-10] c.j.w.o.m.O.selectList                   : <==      Total: 1
+2026-11-18T15:08:33.592+08:00 DEBUG 24492 --- [wms-outbound-service] [io-8084-exec-10] c.j.w.o.m.O.updateById                   : ==>  Preparing: UPDATE wms_outbound_order SET outbound_no=?, order_type=?, source_system=?, source_no=?, warehouse_code=?, status=?, create_time=?, update_time=? WHERE id=?
+2026-11-18T15:08:33.592+08:00 DEBUG 24492 --- [wms-outbound-service] [io-8084-exec-10] c.j.w.o.m.O.updateById                   : ==> Parameters: OUT1794985711422(String), SALE_OUT(String), OMS(String), REV-3(String), DC01(String), CONFIRMING(String), 2026-11-18T15:08:31(LocalDateTime), 2026-11-18T15:08:33.591713800(LocalDateTime), 58(Long)
+2026-11-18T15:08:33.593+08:00 DEBUG 24492 --- [wms-outbound-service] [io-8084-exec-10] c.j.w.o.m.O.updateById                   : <==    Updates: 1
+2026-11-18T15:08:33.594+08:00 DEBUG 24492 --- [wms-outbound-service] [io-8084-exec-10] c.j.w.o.m.O.selectCount                  : ==>  Preparing: SELECT COUNT( * ) AS total FROM wms_outbound_stock_task WHERE (request_id = ?)
+2026-11-18T15:08:33.594+08:00 DEBUG 24492 --- [wms-outbound-service] [io-8084-exec-10] c.j.w.o.m.O.selectCount                  : ==> Parameters: OUT:OUT1794985711422:SKU-001:DC01-A-01-01:B-DEMO(String)
+2026-11-18T15:08:33.595+08:00 DEBUG 24492 --- [wms-outbound-service] [io-8084-exec-10] c.j.w.o.m.O.selectCount                  : <==      Total: 1
+2026-11-18T15:08:33.596+08:00 DEBUG 24492 --- [wms-outbound-service] [io-8084-exec-10] c.j.w.o.m.O.insert                       : ==>  Preparing: INSERT INTO wms_outbound_stock_task ( outbound_no, sku_code, location_code, batch_no, change_qty, request_id, status, retry_count, next_retry_time, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )
+2026-11-18T15:08:33.596+08:00 DEBUG 24492 --- [wms-outbound-service] [io-8084-exec-10] c.j.w.o.m.O.insert                       : ==> Parameters: OUT1794985711422(String), SKU-001(String), DC01-A-01-01(String), B-DEMO(String), -1.000(BigDecimal), OUT:OUT1794985711422:SKU-001:DC01-A-01-01:B-DEMO(String), PENDING(String), 0(Integer), 2026-11-18T15:08:43.591713800(LocalDateTime), 2026-11-18T15:08:33.591713800(LocalDateTime), 2026-11-18T15:08:33.591713800(LocalDateTime)
+2026-11-18T15:08:33.598+08:00 DEBUG 24492 --- [wms-outbound-service] [io-8084-exec-10] c.j.w.o.m.O.insert                       : <==    Updates: 1
+2026-11-18T15:08:33.603+08:00 DEBUG 24492 --- [wms-outbound-service] [io-8084-exec-10] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,sku_code,location_code,batch_no,change_qty,request_id,status,last_error,retry_count,next_retry_time,owner,lease_until,create_time,update_time FROM wms_outbound_stock_task WHERE (outbound_no = ?)
+2026-11-18T15:08:33.606+08:00 DEBUG 24492 --- [wms-outbound-service] [io-8084-exec-10] c.j.w.o.m.O.selectList                   : ==> Parameters: OUT1794985711422(String)
+2026-11-18T15:08:33.608+08:00 DEBUG 24492 --- [wms-outbound-service] [io-8084-exec-10] c.j.w.o.m.O.selectList                   : <==      Total: 1
+2026-11-18T15:08:33.609+08:00 DEBUG 24492 --- [wms-outbound-service] [io-8084-exec-10] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,order_type,source_system,source_no,warehouse_code,target_warehouse_code,status,last_error,create_time,update_time FROM wms_outbound_order WHERE (outbound_no = ?)
+2026-11-18T15:08:33.609+08:00 DEBUG 24492 --- [wms-outbound-service] [io-8084-exec-10] c.j.w.o.m.O.selectList                   : ==> Parameters: OUT1794985711422(String)
+2026-11-18T15:08:33.610+08:00 DEBUG 24492 --- [wms-outbound-service] [io-8084-exec-10] c.j.w.o.m.O.selectList                   : <==      Total: 1
+2026-11-18T15:08:33.612+08:00 DEBUG 24492 --- [wms-outbound-service] [io-8084-exec-10] c.j.w.o.m.O.claimFirstAttempt            : ==>  Preparing: UPDATE wms_outbound_stock_task SET status='PROCESSING', owner=?, lease_until=?, retry_count = retry_count + 1, update_time=? WHERE id=? AND status='PENDING' AND retry_count=0
+2026-11-18T15:08:33.612+08:00 DEBUG 24492 --- [wms-outbound-service] [io-8084-exec-10] c.j.w.o.m.O.claimFirstAttempt            : ==> Parameters: wms-outbound-service:8084:http-nio-8084-exec-10(String), 2026-11-18T15:09:33.611161700(LocalDateTime), 2026-11-18T15:08:33.611161700(LocalDateTime), 47(Long)
+2026-11-18T15:08:33.613+08:00 DEBUG 24492 --- [wms-outbound-service] [io-8084-exec-10] c.j.w.o.m.O.claimFirstAttempt            : <==    Updates: 1
+2026-11-18T15:08:33.620+08:00 DEBUG 24492 --- [wms-outbound-service] [io-8084-exec-10] c.j.w.o.m.O.selectById                   : ==>  Preparing: SELECT id,outbound_no,sku_code,location_code,batch_no,change_qty,request_id,status,last_error,retry_count,next_retry_time,owner,lease_until,create_time,update_time FROM wms_outbound_stock_task WHERE id=?
+2026-11-18T15:08:33.620+08:00 DEBUG 24492 --- [wms-outbound-service] [io-8084-exec-10] c.j.w.o.m.O.selectById                   : ==> Parameters: 47(Long)
+2026-11-18T15:08:33.622+08:00 DEBUG 24492 --- [wms-outbound-service] [io-8084-exec-10] c.j.w.o.m.O.selectById                   : <==      Total: 1
+2026-11-18T15:08:33.622+08:00 DEBUG 24492 --- [wms-outbound-service] [io-8084-exec-10] c.j.w.o.m.O.renewLease                   : ==>  Preparing: UPDATE wms_outbound_stock_task SET lease_until=?, update_time=? WHERE id=? AND owner=?
+2026-11-18T15:08:33.623+08:00 DEBUG 24492 --- [wms-outbound-service] [io-8084-exec-10] c.j.w.o.m.O.renewLease                   : ==> Parameters: 2026-11-18T15:09:33.622118400(LocalDateTime), 2026-11-18T15:08:33.622118400(LocalDateTime), 47(Long), wms-outbound-service:8084:http-nio-8084-exec-10(String)
+2026-11-18T15:08:33.624+08:00 DEBUG 24492 --- [wms-outbound-service] [io-8084-exec-10] c.j.w.o.m.O.renewLease                   : <==    Updates: 1
+2026-11-18T15:08:33.657+08:00 DEBUG 24492 --- [wms-outbound-service] [io-8084-exec-10] c.j.w.o.m.O.markSuccessTerminal          : ==>  Preparing: UPDATE wms_outbound_stock_task SET status='SUCCESS', owner=NULL, lease_until=NULL, last_error=NULL, next_retry_time=NULL, update_time=? WHERE id=?
+2026-11-18T15:08:33.658+08:00 DEBUG 24492 --- [wms-outbound-service] [io-8084-exec-10] c.j.w.o.m.O.markSuccessTerminal          : ==> Parameters: 2026-11-18T15:08:33.657639800(LocalDateTime), 47(Long)
+2026-11-18T15:08:33.664+08:00 DEBUG 24492 --- [wms-outbound-service] [io-8084-exec-10] c.j.w.o.m.O.markSuccessTerminal          : <==    Updates: 1
+2026-11-18T15:08:33.665+08:00 DEBUG 24492 --- [wms-outbound-service] [io-8084-exec-10] c.j.w.o.m.O.renewLease                   : ==>  Preparing: UPDATE wms_outbound_stock_task SET lease_until=?, update_time=? WHERE id=? AND owner=?
+2026-11-18T15:08:33.666+08:00 DEBUG 24492 --- [wms-outbound-service] [io-8084-exec-10] c.j.w.o.m.O.renewLease                   : ==> Parameters: 2026-11-18T15:09:33.665644500(LocalDateTime), 2026-11-18T15:08:33.665644500(LocalDateTime), 47(Long), wms-outbound-service:8084:http-nio-8084-exec-10(String)
+2026-11-18T15:08:33.667+08:00 DEBUG 24492 --- [wms-outbound-service] [io-8084-exec-10] c.j.w.o.m.O.renewLease                   : <==    Updates: 0
+2026-11-18T15:08:33.669+08:00  WARN 24492 --- [wms-outbound-service] [io-8084-exec-10] c.j.w.o.s.impl.OutboundServiceImpl       : 续租未命中（已被回收或 owner 不符）, taskId=47, requestId=OUT:OUT1794985711422:SKU-001:DC01-A-01-01:B-DEMO
+2026-11-18T15:08:33.670+08:00 DEBUG 24492 --- [wms-outbound-service] [io-8084-exec-10] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,order_type,source_system,source_no,warehouse_code,target_warehouse_code,status,last_error,create_time,update_time FROM wms_outbound_order WHERE (outbound_no = ?)
+2026-11-18T15:08:33.670+08:00 DEBUG 24492 --- [wms-outbound-service] [io-8084-exec-10] c.j.w.o.m.O.selectList                   : ==> Parameters: OUT1794985711422(String)
+2026-11-18T15:08:33.671+08:00 DEBUG 24492 --- [wms-outbound-service] [io-8084-exec-10] c.j.w.o.m.O.selectList                   : <==      Total: 1
+2026-11-18T15:08:33.672+08:00 DEBUG 24492 --- [wms-outbound-service] [io-8084-exec-10] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,sku_code,location_code,batch_no,change_qty,request_id,status,last_error,retry_count,next_retry_time,owner,lease_until,create_time,update_time FROM wms_outbound_stock_task WHERE (outbound_no = ?)
+2026-11-18T15:08:33.673+08:00 DEBUG 24492 --- [wms-outbound-service] [io-8084-exec-10] c.j.w.o.m.O.selectList                   : ==> Parameters: OUT1794985711422(String)
+2026-11-18T15:08:33.674+08:00 DEBUG 24492 --- [wms-outbound-service] [io-8084-exec-10] c.j.w.o.m.O.selectList                   : <==      Total: 1
+2026-11-18T15:08:33.674+08:00 DEBUG 24492 --- [wms-outbound-service] [io-8084-exec-10] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,sku_code,batch_no,plan_qty,picked_qty,location_code FROM wms_outbound_item WHERE (outbound_no = ?)
+2026-11-18T15:08:33.674+08:00 DEBUG 24492 --- [wms-outbound-service] [io-8084-exec-10] c.j.w.o.m.O.selectList                   : ==> Parameters: OUT1794985711422(String)
+2026-11-18T15:08:33.675+08:00 DEBUG 24492 --- [wms-outbound-service] [io-8084-exec-10] c.j.w.o.m.O.selectList                   : <==      Total: 1
+2026-11-18T15:08:33.676+08:00 DEBUG 24492 --- [wms-outbound-service] [io-8084-exec-10] c.j.w.o.m.O.updateById                   : ==>  Preparing: UPDATE wms_outbound_order SET outbound_no=?, order_type=?, source_system=?, source_no=?, warehouse_code=?, status=?, create_time=?, update_time=? WHERE id=?
+2026-11-18T15:08:33.676+08:00 DEBUG 24492 --- [wms-outbound-service] [io-8084-exec-10] c.j.w.o.m.O.updateById                   : ==> Parameters: OUT1794985711422(String), SALE_OUT(String), OMS(String), REV-3(String), DC01(String), PICKED(String), 2026-11-18T15:08:31(LocalDateTime), 2026-11-18T15:08:33.676642300(LocalDateTime), 58(Long)
+2026-11-18T15:08:33.677+08:00 DEBUG 24492 --- [wms-outbound-service] [io-8084-exec-10] c.j.w.o.m.O.updateById                   : <==    Updates: 1
+2026-11-18T15:08:33.679+08:00  INFO 24492 --- [wms-outbound-service] [io-8084-exec-10] com.jim.wms.common.outbox.OutboxWriter   : 发件箱已登记 topic=wms-order-status, eventKey=OUT1794985711422
+2026-11-18T15:08:33.702+08:00  INFO 24492 --- [wms-outbound-service] [io-8084-exec-10] c.j.w.o.s.impl.OutboundServiceImpl       : 出库单终态确认, outboundNo=OUT1794985711422, status=PICKED
+2026-11-18T15:08:33.704+08:00 DEBUG 24492 --- [wms-outbound-service] [io-8084-exec-10] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,sku_code,location_code,batch_no,change_qty,request_id,status,last_error,retry_count,next_retry_time,owner,lease_until,create_time,update_time FROM wms_outbound_stock_task WHERE (outbound_no = ?)
+2026-11-18T15:08:33.705+08:00 DEBUG 24492 --- [wms-outbound-service] [io-8084-exec-10] c.j.w.o.m.O.selectList                   : ==> Parameters: OUT1794985711422(String)
+2026-11-18T15:08:33.707+08:00 DEBUG 24492 --- [wms-outbound-service] [io-8084-exec-10] c.j.w.o.m.O.selectList                   : <==      Total: 1
+2026-11-18T15:08:33.708+08:00 DEBUG 24492 --- [wms-outbound-service] [io-8084-exec-10] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,order_type,source_system,source_no,warehouse_code,target_warehouse_code,status,last_error,create_time,update_time FROM wms_outbound_order WHERE (outbound_no = ?)
+2026-11-18T15:08:33.709+08:00 DEBUG 24492 --- [wms-outbound-service] [io-8084-exec-10] c.j.w.o.m.O.selectList                   : ==> Parameters: OUT1794985711422(String)
+2026-11-18T15:08:33.711+08:00 DEBUG 24492 --- [wms-outbound-service] [io-8084-exec-10] c.j.w.o.m.O.selectList                   : <==      Total: 1
+2026-11-18T15:08:34.206+08:00  INFO 24492 --- [wms-outbound-service] [   scheduling-1] com.jim.wms.common.outbox.OutboxRelay    : 发件箱投递成功 id=35, topic=wms-order-status, eventKey=OUT1794985711422
+2026-11-18T15:08:34.208+08:00  INFO 24492 --- [wms-outbound-service] [   scheduling-1] com.jim.wms.common.outbox.OutboxRelay    : 发件箱本轮投递处理 1 条，owner=wms-outbound-service:8084
+2026-11-18T15:08:56.292+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-2] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,order_type,source_system,source_no,warehouse_code,target_warehouse_code,status,last_error,create_time,update_time FROM wms_outbound_order WHERE (outbound_no = ?)
+2026-11-18T15:08:56.294+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-2] c.j.w.o.m.O.selectList                   : ==> Parameters: OUT1794985711422(String)
+2026-11-18T15:08:56.296+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-2] c.j.w.o.m.O.selectList                   : <==      Total: 1
+2026-11-18T15:08:56.296+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-2] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,sku_code,batch_no,plan_qty,picked_qty,location_code FROM wms_outbound_item WHERE (outbound_no = ?)
+2026-11-18T15:08:56.297+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-2] c.j.w.o.m.O.selectList                   : ==> Parameters: OUT1794985711422(String)
+2026-11-18T15:08:56.298+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-2] c.j.w.o.m.O.selectList                   : <==      Total: 1
+2026-11-18T15:08:56.300+08:00  WARN 24492 --- [wms-outbound-service] [nio-8084-exec-2] c.j.w.c.e.GlobalExceptionHandler         : 业务异常: 已拣货不可直接取消，请走反向入库（退货/调拨退回）回补库存
+2026-11-18T15:09:02.090+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==>  Preparing: SELECT * FROM wms_outbound_stock_task WHERE (status IN ('PENDING','FAILED') AND retry_count < ? AND (next_retry_time IS NULL OR next_retry_time <= ?)) OR (status = 'PROCESSING' AND lease_until IS NOT NULL AND lease_until < ?) ORDER BY id ASC
+2026-11-18T15:09:02.092+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==> Parameters: 5(Integer), 2026-11-18T15:09:02.090450600(LocalDateTime), 2026-11-18T15:09:02.090450600(LocalDateTime)
+2026-11-18T15:09:02.093+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : <==      Total: 0
+2026-11-18T15:09:02.185+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,order_type,source_system,source_no,warehouse_code,target_warehouse_code,status,last_error,create_time,update_time FROM wms_outbound_order WHERE (status = ? AND update_time < ?)
+2026-11-18T15:09:02.187+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==> Parameters: CONFIRMING(String), 2026-11-18T15:07:02.185447600(LocalDateTime)
+2026-11-18T15:09:02.189+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : <==      Total: 0
+2026-11-18T15:09:06.378+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-3] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,order_type,source_system,source_no,warehouse_code,target_warehouse_code,status,last_error,create_time,update_time FROM wms_outbound_order WHERE (outbound_no = ?)
+2026-11-18T15:09:06.380+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-3] c.j.w.o.m.O.selectList                   : ==> Parameters: OUT1794985711422(String)
+2026-11-18T15:09:06.382+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-3] c.j.w.o.m.O.selectList                   : <==      Total: 1
+2026-11-18T15:09:06.383+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-3] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,sku_code,batch_no,plan_qty,picked_qty,location_code FROM wms_outbound_item WHERE (outbound_no = ?)
+2026-11-18T15:09:06.383+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-3] c.j.w.o.m.O.selectList                   : ==> Parameters: OUT1794985711422(String)
+2026-11-18T15:09:06.384+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-3] c.j.w.o.m.O.selectList                   : <==      Total: 1
+2026-11-18T15:09:06.385+08:00  WARN 24492 --- [wms-outbound-service] [nio-8084-exec-3] c.j.w.c.e.GlobalExceptionHandler         : 业务异常: 已拣货不可直接取消，请走反向入库（退货/调拨退回）回补库存
+2026-11-18T15:09:32.107+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==>  Preparing: SELECT * FROM wms_outbound_stock_task WHERE (status IN ('PENDING','FAILED') AND retry_count < ? AND (next_retry_time IS NULL OR next_retry_time <= ?)) OR (status = 'PROCESSING' AND lease_until IS NOT NULL AND lease_until < ?) ORDER BY id ASC
+2026-11-18T15:09:32.109+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==> Parameters: 5(Integer), 2026-11-18T15:09:32.107275800(LocalDateTime), 2026-11-18T15:09:32.107275800(LocalDateTime)
+2026-11-18T15:09:32.111+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : <==      Total: 0
+2026-11-18T15:09:32.201+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,order_type,source_system,source_no,warehouse_code,target_warehouse_code,status,last_error,create_time,update_time FROM wms_outbound_order WHERE (status = ? AND update_time < ?)
+2026-11-18T15:09:32.203+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==> Parameters: CONFIRMING(String), 2026-11-18T15:07:32.200033500(LocalDateTime)
+2026-11-18T15:09:32.205+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : <==      Total: 0
+2026-11-18T15:10:02.124+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==>  Preparing: SELECT * FROM wms_outbound_stock_task WHERE (status IN ('PENDING','FAILED') AND retry_count < ? AND (next_retry_time IS NULL OR next_retry_time <= ?)) OR (status = 'PROCESSING' AND lease_until IS NOT NULL AND lease_until < ?) ORDER BY id ASC
+2026-11-18T15:10:02.126+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==> Parameters: 5(Integer), 2026-11-18T15:10:02.123159900(LocalDateTime), 2026-11-18T15:10:02.123159900(LocalDateTime)
+2026-11-18T15:10:02.128+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : <==      Total: 0
+2026-11-18T15:10:02.216+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,order_type,source_system,source_no,warehouse_code,target_warehouse_code,status,last_error,create_time,update_time FROM wms_outbound_order WHERE (status = ? AND update_time < ?)
+2026-11-18T15:10:02.218+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==> Parameters: CONFIRMING(String), 2026-11-18T15:08:02.215889(LocalDateTime)
+2026-11-18T15:10:02.220+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : <==      Total: 0
+2026-11-18T15:10:31.188+08:00  INFO 24492 --- [wms-outbound-service] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-18T15:10:32.143+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==>  Preparing: SELECT * FROM wms_outbound_stock_task WHERE (status IN ('PENDING','FAILED') AND retry_count < ? AND (next_retry_time IS NULL OR next_retry_time <= ?)) OR (status = 'PROCESSING' AND lease_until IS NOT NULL AND lease_until < ?) ORDER BY id ASC
+2026-11-18T15:10:32.145+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==> Parameters: 5(Integer), 2026-11-18T15:10:32.142809600(LocalDateTime), 2026-11-18T15:10:32.142809600(LocalDateTime)
+2026-11-18T15:10:32.146+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : <==      Total: 0
+2026-11-18T15:10:32.237+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,order_type,source_system,source_no,warehouse_code,target_warehouse_code,status,last_error,create_time,update_time FROM wms_outbound_order WHERE (status = ? AND update_time < ?)
+2026-11-18T15:10:32.240+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==> Parameters: CONFIRMING(String), 2026-11-18T15:08:32.235995900(LocalDateTime)
+2026-11-18T15:10:32.241+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : <==      Total: 0
+2026-11-18T15:11:02.156+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==>  Preparing: SELECT * FROM wms_outbound_stock_task WHERE (status IN ('PENDING','FAILED') AND retry_count < ? AND (next_retry_time IS NULL OR next_retry_time <= ?)) OR (status = 'PROCESSING' AND lease_until IS NOT NULL AND lease_until < ?) ORDER BY id ASC
+2026-11-18T15:11:02.159+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==> Parameters: 5(Integer), 2026-11-18T15:11:02.156027500(LocalDateTime), 2026-11-18T15:11:02.156027500(LocalDateTime)
+2026-11-18T15:11:02.160+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : <==      Total: 0
+2026-11-18T15:11:02.250+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,order_type,source_system,source_no,warehouse_code,target_warehouse_code,status,last_error,create_time,update_time FROM wms_outbound_order WHERE (status = ? AND update_time < ?)
+2026-11-18T15:11:02.250+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==> Parameters: CONFIRMING(String), 2026-11-18T15:09:02.249627700(LocalDateTime)
+2026-11-18T15:11:02.251+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : <==      Total: 0
+2026-11-18T15:11:32.167+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==>  Preparing: SELECT * FROM wms_outbound_stock_task WHERE (status IN ('PENDING','FAILED') AND retry_count < ? AND (next_retry_time IS NULL OR next_retry_time <= ?)) OR (status = 'PROCESSING' AND lease_until IS NOT NULL AND lease_until < ?) ORDER BY id ASC
+2026-11-18T15:11:32.170+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==> Parameters: 5(Integer), 2026-11-18T15:11:32.167716700(LocalDateTime), 2026-11-18T15:11:32.167716700(LocalDateTime)
+2026-11-18T15:11:32.172+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : <==      Total: 0
+2026-11-18T15:11:32.262+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,order_type,source_system,source_no,warehouse_code,target_warehouse_code,status,last_error,create_time,update_time FROM wms_outbound_order WHERE (status = ? AND update_time < ?)
+2026-11-18T15:11:32.264+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==> Parameters: CONFIRMING(String), 2026-11-18T15:09:32.261689100(LocalDateTime)
+2026-11-18T15:11:32.265+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : <==      Total: 0
+2026-11-18T15:12:02.240+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==>  Preparing: SELECT * FROM wms_outbound_stock_task WHERE (status IN ('PENDING','FAILED') AND retry_count < ? AND (next_retry_time IS NULL OR next_retry_time <= ?)) OR (status = 'PROCESSING' AND lease_until IS NOT NULL AND lease_until < ?) ORDER BY id ASC
+2026-11-18T15:12:02.244+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==> Parameters: 5(Integer), 2026-11-18T15:12:02.208012200(LocalDateTime), 2026-11-18T15:12:02.208012200(LocalDateTime)
+2026-11-18T15:12:02.254+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : <==      Total: 0
+2026-11-18T15:12:02.281+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,order_type,source_system,source_no,warehouse_code,target_warehouse_code,status,last_error,create_time,update_time FROM wms_outbound_order WHERE (status = ? AND update_time < ?)
+2026-11-18T15:12:02.283+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==> Parameters: CONFIRMING(String), 2026-11-18T15:10:02.280013200(LocalDateTime)
+2026-11-18T15:12:02.286+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : <==      Total: 0
+2026-11-18T15:12:03.431+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-4] c.j.w.o.m.OutboundOrderMapper.insert     : ==>  Preparing: INSERT INTO wms_outbound_order ( outbound_no, order_type, source_system, source_no, warehouse_code, status, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ? )
+2026-11-18T15:12:03.433+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-4] c.j.w.o.m.OutboundOrderMapper.insert     : ==> Parameters: OUT1794985923429(String), SALE_OUT(String), OMS(String), REV-4(String), DC01(String), CREATED(String), 2026-11-18T15:12:03.429279700(LocalDateTime), 2026-11-18T15:12:03.429279700(LocalDateTime)
+2026-11-18T15:12:03.442+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-4] c.j.w.o.m.OutboundOrderMapper.insert     : <==    Updates: 1
+2026-11-18T15:12:03.443+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-4] c.j.w.o.m.O.insert                       : ==>  Preparing: INSERT INTO wms_outbound_item ( outbound_no, sku_code, batch_no, plan_qty, picked_qty, location_code ) VALUES ( ?, ?, ?, ?, ?, ? )
+2026-11-18T15:12:03.445+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-4] c.j.w.o.m.O.insert                       : ==> Parameters: OUT1794985923429(String), SKU-001(String), B-DEMO(String), 1.000(BigDecimal), 0(BigDecimal), DC01-A-01-01(String)
+2026-11-18T15:12:03.454+08:00 DEBUG 24492 --- [wms-outbound-service] [nio-8084-exec-4] c.j.w.o.m.O.insert                       : <==    Updates: 1
+2026-11-18T15:12:03.455+08:00  INFO 24492 --- [wms-outbound-service] [nio-8084-exec-4] c.j.w.o.s.impl.OutboundServiceImpl       : 接收 OMS 单据 REV-4, 生成 WMS 出库单 OUT1794985923429
+2026-11-18T15:12:32.269+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==>  Preparing: SELECT * FROM wms_outbound_stock_task WHERE (status IN ('PENDING','FAILED') AND retry_count < ? AND (next_retry_time IS NULL OR next_retry_time <= ?)) OR (status = 'PROCESSING' AND lease_until IS NOT NULL AND lease_until < ?) ORDER BY id ASC
+2026-11-18T15:12:32.270+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==> Parameters: 5(Integer), 2026-11-18T15:12:32.268865800(LocalDateTime), 2026-11-18T15:12:32.268865800(LocalDateTime)
+2026-11-18T15:12:32.272+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : <==      Total: 0
+2026-11-18T15:12:32.301+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,order_type,source_system,source_no,warehouse_code,target_warehouse_code,status,last_error,create_time,update_time FROM wms_outbound_order WHERE (status = ? AND update_time < ?)
+2026-11-18T15:12:32.301+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==> Parameters: CONFIRMING(String), 2026-11-18T15:10:32.300370100(LocalDateTime)
+2026-11-18T15:12:32.302+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : <==      Total: 0
+2026-11-18T15:12:34.247+08:00  INFO 24492 --- [wms-outbound-service] [ad | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2026-11-18T15:13:02.287+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==>  Preparing: SELECT * FROM wms_outbound_stock_task WHERE (status IN ('PENDING','FAILED') AND retry_count < ? AND (next_retry_time IS NULL OR next_retry_time <= ?)) OR (status = 'PROCESSING' AND lease_until IS NOT NULL AND lease_until < ?) ORDER BY id ASC
+2026-11-18T15:13:02.288+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==> Parameters: 5(Integer), 2026-11-18T15:13:02.287135700(LocalDateTime), 2026-11-18T15:13:02.287135700(LocalDateTime)
+2026-11-18T15:13:02.293+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : <==      Total: 0
+2026-11-18T15:13:02.319+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,order_type,source_system,source_no,warehouse_code,target_warehouse_code,status,last_error,create_time,update_time FROM wms_outbound_order WHERE (status = ? AND update_time < ?)
+2026-11-18T15:13:02.320+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==> Parameters: CONFIRMING(String), 2026-11-18T15:11:02.318229(LocalDateTime)
+2026-11-18T15:13:02.321+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : <==      Total: 0
+2026-11-18T15:13:32.297+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==>  Preparing: SELECT * FROM wms_outbound_stock_task WHERE (status IN ('PENDING','FAILED') AND retry_count < ? AND (next_retry_time IS NULL OR next_retry_time <= ?)) OR (status = 'PROCESSING' AND lease_until IS NOT NULL AND lease_until < ?) ORDER BY id ASC
+2026-11-18T15:13:32.299+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==> Parameters: 5(Integer), 2026-11-18T15:13:32.296663600(LocalDateTime), 2026-11-18T15:13:32.296663600(LocalDateTime)
+2026-11-18T15:13:32.300+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : <==      Total: 0
+2026-11-18T15:13:32.329+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,order_type,source_system,source_no,warehouse_code,target_warehouse_code,status,last_error,create_time,update_time FROM wms_outbound_order WHERE (status = ? AND update_time < ?)
+2026-11-18T15:13:32.331+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==> Parameters: CONFIRMING(String), 2026-11-18T15:11:32.328720400(LocalDateTime)
+2026-11-18T15:13:32.332+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : <==      Total: 0
+2026-11-18T15:14:02.304+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==>  Preparing: SELECT * FROM wms_outbound_stock_task WHERE (status IN ('PENDING','FAILED') AND retry_count < ? AND (next_retry_time IS NULL OR next_retry_time <= ?)) OR (status = 'PROCESSING' AND lease_until IS NOT NULL AND lease_until < ?) ORDER BY id ASC
+2026-11-18T15:14:02.306+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==> Parameters: 5(Integer), 2026-11-18T15:14:02.304644800(LocalDateTime), 2026-11-18T15:14:02.304644800(LocalDateTime)
+2026-11-18T15:14:02.308+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : <==      Total: 0
+2026-11-18T15:14:02.335+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,order_type,source_system,source_no,warehouse_code,target_warehouse_code,status,last_error,create_time,update_time FROM wms_outbound_order WHERE (status = ? AND update_time < ?)
+2026-11-18T15:14:02.337+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==> Parameters: CONFIRMING(String), 2026-11-18T15:12:02.335789100(LocalDateTime)
+2026-11-18T15:14:02.338+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : <==      Total: 0
+2026-11-18T15:14:32.318+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==>  Preparing: SELECT * FROM wms_outbound_stock_task WHERE (status IN ('PENDING','FAILED') AND retry_count < ? AND (next_retry_time IS NULL OR next_retry_time <= ?)) OR (status = 'PROCESSING' AND lease_until IS NOT NULL AND lease_until < ?) ORDER BY id ASC
+2026-11-18T15:14:32.320+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==> Parameters: 5(Integer), 2026-11-18T15:14:32.318180400(LocalDateTime), 2026-11-18T15:14:32.318180400(LocalDateTime)
+2026-11-18T15:14:32.323+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : <==      Total: 0
+2026-11-18T15:14:32.348+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,order_type,source_system,source_no,warehouse_code,target_warehouse_code,status,last_error,create_time,update_time FROM wms_outbound_order WHERE (status = ? AND update_time < ?)
+2026-11-18T15:14:32.349+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==> Parameters: CONFIRMING(String), 2026-11-18T15:12:32.348906900(LocalDateTime)
+2026-11-18T15:14:32.351+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : <==      Total: 0
+2026-11-18T15:15:02.332+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==>  Preparing: SELECT * FROM wms_outbound_stock_task WHERE (status IN ('PENDING','FAILED') AND retry_count < ? AND (next_retry_time IS NULL OR next_retry_time <= ?)) OR (status = 'PROCESSING' AND lease_until IS NOT NULL AND lease_until < ?) ORDER BY id ASC
+2026-11-18T15:15:02.334+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==> Parameters: 5(Integer), 2026-11-18T15:15:02.332162800(LocalDateTime), 2026-11-18T15:15:02.332162800(LocalDateTime)
+2026-11-18T15:15:02.336+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : <==      Total: 0
+2026-11-18T15:15:02.364+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,order_type,source_system,source_no,warehouse_code,target_warehouse_code,status,last_error,create_time,update_time FROM wms_outbound_order WHERE (status = ? AND update_time < ?)
+2026-11-18T15:15:02.366+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==> Parameters: CONFIRMING(String), 2026-11-18T15:13:02.363465100(LocalDateTime)
+2026-11-18T15:15:02.367+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : <==      Total: 0
+2026-11-18T15:15:31.204+08:00  INFO 24492 --- [wms-outbound-service] [trap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-11-18T15:15:32.351+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==>  Preparing: SELECT * FROM wms_outbound_stock_task WHERE (status IN ('PENDING','FAILED') AND retry_count < ? AND (next_retry_time IS NULL OR next_retry_time <= ?)) OR (status = 'PROCESSING' AND lease_until IS NOT NULL AND lease_until < ?) ORDER BY id ASC
+2026-11-18T15:15:32.352+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : ==> Parameters: 5(Integer), 2026-11-18T15:15:32.351734700(LocalDateTime), 2026-11-18T15:15:32.351734700(LocalDateTime)
+2026-11-18T15:15:32.353+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectCandidates             : <==      Total: 0
+2026-11-18T15:15:32.369+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==>  Preparing: SELECT id,outbound_no,order_type,source_system,source_no,warehouse_code,target_warehouse_code,status,last_error,create_time,update_time FROM wms_outbound_order WHERE (status = ? AND update_time < ?)
+2026-11-18T15:15:32.371+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : ==> Parameters: CONFIRMING(String), 2026-11-18T15:13:32.369071(LocalDateTime)
+2026-11-18T15:15:32.373+08:00 DEBUG 24492 --- [wms-outbound-service] [   scheduling-1] c.j.w.o.m.O.selectList                   : <==      Total: 0

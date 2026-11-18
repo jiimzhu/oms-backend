@@ -1,0 +1,13 @@
+﻿--- 启动前中间件检查 ---
+  中间件端口 3306 在线
+  中间件端口 6379 在线
+  中间件端口 9092 在线
+  已启动 oms-eureka-server，PID=36580，jar=oms-eureka-server-1.0.0.jar
+  已启动 oms-product-service，PID=17096，jar=oms-product-service-1.0.0.jar
+  已启动 oms-order-service，PID=23796，jar=oms-order-service-1.0.0.jar
+  已启动 oms-gateway，PID=20440，jar=oms-gateway-1.0.0.jar
+--- 当前状态 ---
+  UP    oms-eureka-server  8762
+  UP    oms-product-service  8090
+  UP    oms-order-service  8091
+  UP    oms-gateway  8092
